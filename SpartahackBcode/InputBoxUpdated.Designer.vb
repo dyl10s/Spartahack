@@ -65,6 +65,7 @@ Partial Class InputBoxUpdated
         '
         'bunGradPan
         '
+        Me.bunGradPan.BackColor = System.Drawing.Color.White
         Me.bunGradPan.BackgroundImage = CType(resources.GetObject("bunGradPan.BackgroundImage"), System.Drawing.Image)
         Me.bunGradPan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.bunGradPan.Controls.Add(Me.btnMin)
@@ -112,7 +113,7 @@ Partial Class InputBoxUpdated
         'BunifuFlatButton1
         '
         Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.Silver
+        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton1.BorderRadius = 7
         Me.BunifuFlatButton1.ButtonText = "Create"
@@ -149,7 +150,7 @@ Partial Class InputBoxUpdated
         'BunifuFlatButton2
         '
         Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuFlatButton2.BackColor = System.Drawing.Color.Silver
+        Me.BunifuFlatButton2.BackColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton2.BorderRadius = 7
         Me.BunifuFlatButton2.ButtonText = "Exit"
@@ -187,6 +188,7 @@ Partial Class InputBoxUpdated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(460, 280)
         Me.Controls.Add(Me.BunifuFlatButton2)
         Me.Controls.Add(Me.BunifuFlatButton1)

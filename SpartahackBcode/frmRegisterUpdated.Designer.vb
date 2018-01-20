@@ -25,7 +25,6 @@ Partial Class frmRegisterUpdated
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRegisterUpdated))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.btnBack = New Bunifu.Framework.UI.BunifuImageButton()
         Me.txtEmail = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
@@ -41,29 +40,16 @@ Partial Class frmRegisterUpdated
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnBack = New Bunifu.Framework.UI.BunifuImageButton()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
         '
         Me.BunifuElipse1.ElipseRadius = 5
         Me.BunifuElipse1.TargetControl = Me
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.Transparent
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
-        Me.btnBack.ImageActive = Nothing
-        Me.btnBack.Location = New System.Drawing.Point(7, 6)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(30, 31)
-        Me.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnBack.TabIndex = 9
-        Me.btnBack.TabStop = False
-        Me.btnBack.Zoom = 10
         '
         'txtEmail
         '
@@ -298,6 +284,20 @@ Partial Class frmRegisterUpdated
         Me.btnExit.TabStop = False
         Me.btnExit.Zoom = 10
         '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.Transparent
+        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
+        Me.btnBack.ImageActive = Nothing
+        Me.btnBack.Location = New System.Drawing.Point(7, 6)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(30, 31)
+        Me.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnBack.TabIndex = 9
+        Me.btnBack.TabStop = False
+        Me.btnBack.Zoom = 10
+        '
         'frmRegisterUpdated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -323,9 +323,9 @@ Partial Class frmRegisterUpdated
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmRegisterUpdated"
         Me.Text = "frmRegisterUpdated"
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
