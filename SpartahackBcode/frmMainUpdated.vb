@@ -90,7 +90,6 @@ Public Class frmMainUpdated
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblUploadFile.Click
-
         addNew(InputBox("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
     End Sub
 
