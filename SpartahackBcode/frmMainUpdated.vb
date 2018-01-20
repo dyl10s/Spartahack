@@ -75,6 +75,7 @@ Public Class frmMainUpdated
         connect.lblTitle.Text = name
         connect.textData = name
         connect.type = type
+        connect.path = ""
 
         If type = "link" Then
             pLink.Show()
@@ -114,5 +115,11 @@ Public Class frmMainUpdated
 
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnFindFile_Click(sender As Object, e As EventArgs) Handles btnFindFile.Click
+        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            txtFileLink.Text = OpenFileDialog1.FileName
+        End If
     End Sub
 End Class

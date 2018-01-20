@@ -13,12 +13,14 @@
         If type = "file" Then
 
             mainForm.pFile.Show()
-            mainForm.txtInfo.Text = textData
-
+            mainForm.connect = Me
 
         End If
 
         If type = "link" Then
+
+            mainForm.pLink.Show()
+            mainForm.connect = Me
 
         End If
 
