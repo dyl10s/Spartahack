@@ -3,7 +3,7 @@
 Public Class frmMain
 
     Dim cons As New List(Of connections)
-    Dim connect As connections
+    Public connect As connections
     Public user As clsUser
 
     Private Sub btnSignOut_Click(sender As Object, e As EventArgs) Handles btnSignOut.Click
