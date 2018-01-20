@@ -19,8 +19,9 @@
             Dim fName As String = rawData.Split("~")(0)
             Dim lName As String = rawData.Split("~")(1)
             Dim email As String = rawData.Split("~")(2)
+            Dim bcode As String = rawData.Split("~")(3)
 
-            Dim clsUser As New clsUser(fName, lName, email)
+            Dim clsUser As New clsUser(fName, lName, email, bcode)
 
 
         Catch ex As Exception

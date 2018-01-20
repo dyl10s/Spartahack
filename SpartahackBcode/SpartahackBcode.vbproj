@@ -91,6 +91,7 @@
     <Compile Include="connections.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="extractThumbnail.vb" />
     <Compile Include="frmConnections.Designer.vb">
       <DependentUpon>frmConnections.vb</DependentUpon>
     </Compile>

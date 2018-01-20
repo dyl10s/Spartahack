@@ -36,6 +36,7 @@ Partial Class frmLogin
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(227, 20)
         Me.txtEmail.TabIndex = 0
+        Me.txtEmail.Text = "dylanstrohschein@gmail.com"
         '
         'txtPassword
         '
@@ -43,6 +44,7 @@ Partial Class frmLogin
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(227, 20)
         Me.txtPassword.TabIndex = 1
+        Me.txtPassword.Text = "soccer"
         '
         'Label1
         '

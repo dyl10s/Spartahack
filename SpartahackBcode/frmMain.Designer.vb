@@ -30,6 +30,8 @@ Partial Class frmMain
         Me.lblType = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.txtInfo = New System.Windows.Forms.TextBox()
+        Me.btnBrowse = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -72,6 +74,7 @@ Partial Class frmMain
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.btnBrowse)
         Me.Panel2.Controls.Add(Me.lblType)
         Me.Panel2.Controls.Add(Me.btnSave)
         Me.Panel2.Controls.Add(Me.txtInfo)
@@ -93,7 +96,7 @@ Partial Class frmMain
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(770, 12)
+        Me.btnSave.Location = New System.Drawing.Point(765, 14)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(111, 23)
         Me.btnSave.TabIndex = 1
@@ -104,8 +107,21 @@ Partial Class frmMain
         '
         Me.txtInfo.Location = New System.Drawing.Point(93, 14)
         Me.txtInfo.Name = "txtInfo"
-        Me.txtInfo.Size = New System.Drawing.Size(640, 20)
+        Me.txtInfo.Size = New System.Drawing.Size(621, 20)
         Me.txtInfo.TabIndex = 0
+        '
+        'btnBrowse
+        '
+        Me.btnBrowse.Location = New System.Drawing.Point(720, 14)
+        Me.btnBrowse.Name = "btnBrowse"
+        Me.btnBrowse.Size = New System.Drawing.Size(39, 23)
+        Me.btnBrowse.TabIndex = 3
+        Me.btnBrowse.Text = "..."
+        Me.btnBrowse.UseVisualStyleBackColor = True
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'frmMain
         '
@@ -132,4 +148,6 @@ Partial Class frmMain
     Friend WithEvents lblType As Label
     Friend WithEvents btnSave As Button
     Friend WithEvents txtInfo As TextBox
+    Friend WithEvents btnBrowse As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

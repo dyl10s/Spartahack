@@ -16,7 +16,7 @@
         If lbConnections.SelectedItem <> Nothing Then
 
             mainForm.Panel2.Visible = True
-
+            mainForm.addNew(lbConnections.SelectedItem.ToString, "file")
         End If
 
     End Sub
