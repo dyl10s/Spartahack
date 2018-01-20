@@ -66,7 +66,7 @@ Public Class frmMainUpdated
     End Sub
 
     Private Sub btnUploadFile_Click(sender As Object, e As EventArgs)
-        addNew(InputBoxUpdated("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
+        addNew(InputBox("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
     End Sub
 
     Public Sub addNew(name As String, type As String)
@@ -88,19 +88,19 @@ Public Class frmMainUpdated
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblUploadFile.Click
-        addNew(InputBoxUpdated("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
+        addNew(InputBox("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
     End Sub
 
     Private Sub lblConnectLink_Click(sender As Object, e As EventArgs) Handles lblConnectLink.Click
-        addNew(InputBoxUpdated("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
+        addNew(InputBox("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
     End Sub
 
     Private Sub btnFileUpload_Click(sender As Object, e As EventArgs) Handles btnFileUpload.Click
-        addNew(InputBoxUpdated("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
+        addNew(InputBox("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
     End Sub
 
     Private Sub BunifuImageButton4_Click(sender As Object, e As EventArgs) Handles btnLink.Click
-        addNew(InputBoxUpdated("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
+        addNew(InputBox("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
     End Sub
 
     Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles Label1.Click

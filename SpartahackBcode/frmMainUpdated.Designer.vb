@@ -47,6 +47,7 @@ Partial Class frmMainUpdated
         Me.lblFile = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.btnOpen = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pLink.SuspendLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bunGradPan.SuspendLayout()
@@ -263,7 +264,7 @@ Partial Class frmMainUpdated
         Me.btnLink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnLink.TabIndex = 2
         Me.btnLink.TabStop = False
-        Me.btnLink.Zoom = 10
+        Me.btnLink.Zoom = 0
         '
         'btnFileUpload
         '
@@ -277,7 +278,7 @@ Partial Class frmMainUpdated
         Me.btnFileUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnFileUpload.TabIndex = 1
         Me.btnFileUpload.TabStop = False
-        Me.btnFileUpload.Zoom = 10
+        Me.btnFileUpload.Zoom = 0
         '
         'btnSignOut
         '
@@ -298,6 +299,7 @@ Partial Class frmMainUpdated
         Me.pFile.BackColor = System.Drawing.Color.Silver
         Me.pFile.BackgroundImage = CType(resources.GetObject("pFile.BackgroundImage"), System.Drawing.Image)
         Me.pFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pFile.Controls.Add(Me.btnOpen)
         Me.pFile.Controls.Add(Me.btnFindFile)
         Me.pFile.Controls.Add(Me.BunifuImageButton2)
         Me.pFile.Controls.Add(Me.BunifuFlatButton1)
@@ -338,7 +340,7 @@ Partial Class frmMainUpdated
         Me.btnFindFile.IconVisible = True
         Me.btnFindFile.IconZoom = 90.0R
         Me.btnFindFile.IsTab = False
-        Me.btnFindFile.Location = New System.Drawing.Point(565, 17)
+        Me.btnFindFile.Location = New System.Drawing.Point(449, 15)
         Me.btnFindFile.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnFindFile.Name = "btnFindFile"
         Me.btnFindFile.Normalcolor = System.Drawing.Color.Silver
@@ -416,7 +418,7 @@ Partial Class frmMainUpdated
         Me.txtFileLink.Location = New System.Drawing.Point(93, 21)
         Me.txtFileLink.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtFileLink.Name = "txtFileLink"
-        Me.txtFileLink.Size = New System.Drawing.Size(463, 30)
+        Me.txtFileLink.Size = New System.Drawing.Size(347, 30)
         Me.txtFileLink.TabIndex = 19
         Me.txtFileLink.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
@@ -439,87 +441,42 @@ Partial Class frmMainUpdated
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(861, 340)
         Me.FlowLayoutPanel1.TabIndex = 3
         '
-        'OpenFileDialog1
+        'btnOpen
         '
-        Me.btnFileUpload.BackColor = System.Drawing.Color.Transparent
-        Me.btnFileUpload.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnFileUpload.Image = CType(resources.GetObject("btnFileUpload.Image"), System.Drawing.Image)
-        Me.btnFileUpload.ImageActive = Nothing
-        Me.btnFileUpload.Location = New System.Drawing.Point(388, 16)
-        Me.btnFileUpload.Name = "btnFileUpload"
-        Me.btnFileUpload.Size = New System.Drawing.Size(30, 30)
-        Me.btnFileUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnFileUpload.TabIndex = 1
-        Me.btnFileUpload.TabStop = False
-        Me.btnFileUpload.Zoom = 0
-        '
-        'btnLink
-        '
-        Me.btnLink.BackColor = System.Drawing.Color.Transparent
-        Me.btnLink.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLink.Image = CType(resources.GetObject("btnLink.Image"), System.Drawing.Image)
-        Me.btnLink.ImageActive = Nothing
-        Me.btnLink.Location = New System.Drawing.Point(181, 16)
-        Me.btnLink.Name = "btnLink"
-        Me.btnLink.Size = New System.Drawing.Size(30, 30)
-        Me.btnLink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnLink.TabIndex = 2
-        Me.btnLink.TabStop = False
-        Me.btnLink.Zoom = 0
-        '
-        'lblUploadFile
-        '
-        Me.lblUploadFile.AutoSize = True
-        Me.lblUploadFile.BackColor = System.Drawing.Color.Transparent
-        Me.lblUploadFile.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblUploadFile.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUploadFile.Location = New System.Drawing.Point(424, 21)
-        Me.lblUploadFile.Name = "lblUploadFile"
-        Me.lblUploadFile.Size = New System.Drawing.Size(122, 21)
-        Me.lblUploadFile.TabIndex = 21
-        Me.lblUploadFile.Text = "Upload File"
-        '
-        'lblConnectLink
-        '
-        Me.lblConnectLink.AutoSize = True
-        Me.lblConnectLink.BackColor = System.Drawing.Color.Transparent
-        Me.lblConnectLink.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblConnectLink.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblConnectLink.Location = New System.Drawing.Point(217, 21)
-        Me.lblConnectLink.Name = "lblConnectLink"
-        Me.lblConnectLink.Size = New System.Drawing.Size(141, 21)
-        Me.lblConnectLink.TabIndex = 22
-        Me.lblConnectLink.Text = "Connect Link"
-        '
-        'btnMin
-        '
-        Me.btnMin.BackColor = System.Drawing.Color.Transparent
-        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMin.Image = CType(resources.GetObject("btnMin.Image"), System.Drawing.Image)
-        Me.btnMin.ImageActive = Nothing
-        Me.btnMin.Location = New System.Drawing.Point(786, 4)
-        Me.btnMin.Name = "btnMin"
-        Me.btnMin.Size = New System.Drawing.Size(30, 30)
-        Me.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMin.TabIndex = 24
-        Me.btnMin.TabStop = False
-        Me.btnMin.Zoom = 10
-        '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
-        Me.btnExit.ImageActive = Nothing
-        Me.btnExit.Location = New System.Drawing.Point(825, 1)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(35, 35)
-        Me.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnExit.TabIndex = 23
-        Me.btnExit.TabStop = False
-        Me.btnExit.Zoom = 10
-        '
-        'Label1
+        Me.btnOpen.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnOpen.BackColor = System.Drawing.Color.Silver
+        Me.btnOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnOpen.BorderRadius = 7
+        Me.btnOpen.ButtonText = "Open"
+        Me.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOpen.DisabledColor = System.Drawing.Color.Gray
+        Me.btnOpen.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOpen.ForeColor = System.Drawing.Color.White
+        Me.btnOpen.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnOpen.Iconimage = Nothing
+        Me.btnOpen.Iconimage_right = Nothing
+        Me.btnOpen.Iconimage_right_Selected = Nothing
+        Me.btnOpen.Iconimage_Selected = Nothing
+        Me.btnOpen.IconMarginLeft = 0
+        Me.btnOpen.IconMarginRight = 0
+        Me.btnOpen.IconRightVisible = True
+        Me.btnOpen.IconRightZoom = 0R
+        Me.btnOpen.IconVisible = True
+        Me.btnOpen.IconZoom = 90.0R
+        Me.btnOpen.IsTab = False
+        Me.btnOpen.Location = New System.Drawing.Point(550, 15)
+        Me.btnOpen.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnOpen.Name = "btnOpen"
+        Me.btnOpen.Normalcolor = System.Drawing.Color.Silver
+        Me.btnOpen.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnOpen.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnOpen.selected = False
+        Me.btnOpen.Size = New System.Drawing.Size(81, 39)
+        Me.btnOpen.TabIndex = 21
+        Me.btnOpen.Text = "Open"
+        Me.btnOpen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnOpen.Textcolor = System.Drawing.Color.Black
+        Me.btnOpen.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'frmMainUpdated
         '
@@ -573,4 +530,5 @@ Partial Class frmMainUpdated
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents Label1 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents btnOpen As Bunifu.Framework.UI.BunifuFlatButton
 End Class
