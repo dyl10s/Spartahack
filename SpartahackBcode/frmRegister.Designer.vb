@@ -39,7 +39,7 @@ Partial Class frmRegister
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(106, 332)
+        Me.btnLogin.Location = New System.Drawing.Point(106, 327)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(75, 23)
         Me.btnLogin.TabIndex = 9
