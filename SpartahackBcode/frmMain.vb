@@ -18,17 +18,20 @@ Public Class frmMain
 
         connect = New connections
         connect.lblTitle.Text = name
+        connect.textData = name
         connect.type = type
 
         If type = "link" Then
 
             lblType.Text = "Link:"
+            pLink.Show()
 
         End If
 
         If type = "file" Then
 
             lblType.Text = "File:"
+            pFile.Show()
 
         End If
 
@@ -42,10 +45,11 @@ Public Class frmMain
         client.UploadFile("ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + txtInfo.Text.Split(".")(txtInfo.Text.Split(".").Count - 1), txtInfo.Text)
 
         Dim sqlCon As New sqlManager
-        sqlCon.sendData("Insert Into connections (type, url, bCode) VALUES ('" + connect.type + "', '" + ftpLocation + "', '" + user.bCode + "')")
+        sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + ftpLocation + "', '" + user.bCode + "' , '" + connect.textData + "')")
 
         MsgBox("Upload Complete")
-        Panel2.Visible = False
+        pFile.Visible = False
+        pLink.Visible = False
         Me.cons.Add(connect)
         FlowLayoutPanel1.Controls.Add(connect)
         sqlCon.close()
@@ -56,7 +60,7 @@ Public Class frmMain
 
         Dim sqlCon As New sqlManager
 
-        Dim cons As String() = sqlCon.getData("select * from connections where bCode = '" + user.bCode + "'", 3).Split(";")
+        Dim cons As String() = sqlCon.getData("select * from connections where bCode = '" + user.bCode + "'", 4).Split(";")
 
         Dim client As WebClient = New WebClient
         client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
@@ -65,14 +69,15 @@ Public Class frmMain
             If i <> "" Then
                 Dim item As New connections
                 item.type = i.Split("~")(0)
-                item.lblTitle.Text = i.Split("~")(1).Split("/")(i.Split("~")(1).Split("/").Length - 1).Split(".")(0)
-                My.Computer.FileSystem.CreateDirectory(System.AppDomain.CurrentDomain.BaseDirectory())
-                client.DownloadFile("ftp://spartaack.atwebpages.com/" + i.Split("~")(1).Split("/")(i.Split("~")(1).Split("/").Length - 1), System.AppDomain.CurrentDomain.BaseDirectory() + i.Split("~")(1).Split("/")(i.Split("~")(1).Split("/").Length - 1))
-                Try
-                    item.pbPreview.Image = Image.FromFile(System.AppDomain.CurrentDomain.BaseDirectory() + i.Split("~")(1).Split("/")(i.Split("~")(1).Split("/").Length - 1))
-                Catch ex As Exception
 
-                End Try
+                If item.type = "file" Then
+                    item.lblTitle.Text = i.Split("~")(3)
+                End If
+
+                If item.type = "link" Then
+                    item.lblTitle.Text = i.Split("~")(3)
+                End If
+
                 'extractThumbnail.GetThumbnail(System.AppDomain.CurrentDomain.BaseDirectory() + i.Split("~")(1).Split("/")(i.Split("~")(1).Split("/").Length - 1))
                 FlowLayoutPanel1.Controls.Add(item)
                 Me.cons.Add(item)
@@ -91,10 +96,32 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnFile.Click
 
-        Dim frmCons As New frmConnections(Me)
-        frmCons.Show()
+        addNew(InputBox("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
+
+    End Sub
+
+    Private Sub btnLink_Click(sender As Object, e As EventArgs) Handles btnLink.Click
+
+        addNew(InputBox("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
+
+    End Sub
+
+    Private Sub btnSubmitLink_Click(sender As Object, e As EventArgs) Handles btnSubmitLink.Click
+
+        Dim client As WebClient = New WebClient
+        client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
+
+        Dim sqlCon As New sqlManager
+        sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + txtInfoLink.Text + "', '" + user.bCode + "' , '" + connect.textData + "')")
+
+        MsgBox("Upload Complete")
+        pFile.Visible = False
+        pLink.Visible = False
+        Me.cons.Add(connect)
+        FlowLayoutPanel1.Controls.Add(connect)
+        sqlCon.close()
 
     End Sub
 End Class
