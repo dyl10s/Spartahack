@@ -1,17 +1,13 @@
 ﻿Public Class frmLoginUpdated
 
     Private Sub frmLoginUpdated_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackColor = ColorTranslator.FromHtml("#2b627a")
-    End Sub
+        Me.CenterToScreen()
 
-    Private Sub txtUser_OnValueChanged(sender As Object, e As EventArgs) Handles txtEmail.OnValueChanged
+        txtEmail.Left = (Me.ClientSize.Width / 2) - (txtEmail.Width / 2)
+        txtPassword.Left = (Me.ClientSize.Width / 2) - (txtPassword.Width / 2)
+        btnLogin.Left = (Me.ClientSize.Width / 2) - (btnLogin.Width / 2)
+        btnRegister.Left = (Me.ClientSize.Width / 2) - (btnRegister.Width / 2)
 
-    End Sub
-
-    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        Me.Hide()
-        Dim frmReg As New frmRegister
-        frmReg.Show()
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -32,4 +28,9 @@
         End Try
     End Sub
 
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        Me.Hide()
+        Dim frmReg As New frmRegister
+        frmReg.Show()
+    End Sub
 End Class

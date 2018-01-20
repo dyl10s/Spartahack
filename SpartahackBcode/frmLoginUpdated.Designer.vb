@@ -37,15 +37,15 @@ Partial Class frmLoginUpdated
         '
         'txtEmail
         '
-        Me.txtEmail.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtEmail.BorderColorIdle = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtEmail.BorderColorMouseHover = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtEmail.BorderColorFocused = System.Drawing.Color.White
+        Me.txtEmail.BorderColorIdle = System.Drawing.Color.White
+        Me.txtEmail.BorderColorMouseHover = System.Drawing.Color.White
         Me.txtEmail.BorderThickness = 3
         Me.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtEmail.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.Transparent
         Me.txtEmail.isPassword = False
-        Me.txtEmail.Location = New System.Drawing.Point(56, 153)
+        Me.txtEmail.Location = New System.Drawing.Point(56, 165)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(293, 54)
@@ -54,9 +54,9 @@ Partial Class frmLoginUpdated
         '
         'txtPassword
         '
-        Me.txtPassword.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtPassword.BorderColorIdle = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtPassword.BorderColorMouseHover = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtPassword.BorderColorFocused = System.Drawing.Color.White
+        Me.txtPassword.BorderColorIdle = System.Drawing.Color.White
+        Me.txtPassword.BorderColorMouseHover = System.Drawing.Color.White
         Me.txtPassword.BorderThickness = 3
         Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPassword.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -71,13 +71,15 @@ Partial Class frmLoginUpdated
         '
         'btnLogin
         '
-        Me.btnLogin.Activecolor = System.Drawing.Color.Gray
-        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnLogin.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnLogin.BackColor = System.Drawing.Color.White
         Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnLogin.BorderRadius = 0
+        Me.btnLogin.BorderRadius = 7
         Me.btnLogin.ButtonText = "Login"
         Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogin.DisabledColor = System.Drawing.Color.Gray
+        Me.btnLogin.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
         Me.btnLogin.Iconcolor = System.Drawing.Color.Transparent
         Me.btnLogin.Iconimage = Nothing
         Me.btnLogin.Iconimage_right = Nothing
@@ -91,27 +93,30 @@ Partial Class frmLoginUpdated
         Me.btnLogin.IconZoom = 90.0R
         Me.btnLogin.IsTab = False
         Me.btnLogin.Location = New System.Drawing.Point(78, 345)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnLogin.Normalcolor = System.Drawing.Color.White
         Me.btnLogin.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnLogin.OnHoverTextColor = System.Drawing.Color.White
+        Me.btnLogin.OnHoverTextColor = System.Drawing.Color.Black
         Me.btnLogin.selected = False
         Me.btnLogin.Size = New System.Drawing.Size(241, 48)
         Me.btnLogin.TabIndex = 3
         Me.btnLogin.Text = "Login"
         Me.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnLogin.Textcolor = System.Drawing.Color.White
-        Me.btnLogin.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Textcolor = System.Drawing.Color.Black
+        Me.btnLogin.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'btnRegister
         '
-        Me.btnRegister.Activecolor = System.Drawing.Color.Gray
-        Me.btnRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRegister.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnRegister.BackColor = System.Drawing.Color.White
         Me.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRegister.BorderRadius = 0
+        Me.btnRegister.BorderRadius = 7
         Me.btnRegister.ButtonText = "Register"
         Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegister.DisabledColor = System.Drawing.Color.Gray
+        Me.btnRegister.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegister.ForeColor = System.Drawing.Color.White
         Me.btnRegister.Iconcolor = System.Drawing.Color.Transparent
         Me.btnRegister.Iconimage = Nothing
         Me.btnRegister.Iconimage_right = Nothing
@@ -124,24 +129,25 @@ Partial Class frmLoginUpdated
         Me.btnRegister.IconVisible = True
         Me.btnRegister.IconZoom = 90.0R
         Me.btnRegister.IsTab = False
-        Me.btnRegister.Location = New System.Drawing.Point(78, 410)
+        Me.btnRegister.Location = New System.Drawing.Point(78, 408)
+        Me.btnRegister.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRegister.Normalcolor = System.Drawing.Color.White
         Me.btnRegister.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnRegister.OnHoverTextColor = System.Drawing.Color.White
+        Me.btnRegister.OnHoverTextColor = System.Drawing.Color.Black
         Me.btnRegister.selected = False
         Me.btnRegister.Size = New System.Drawing.Size(241, 48)
         Me.btnRegister.TabIndex = 4
         Me.btnRegister.Text = "Register"
         Me.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnRegister.Textcolor = System.Drawing.Color.White
-        Me.btnRegister.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegister.Textcolor = System.Drawing.Color.Black
+        Me.btnRegister.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'frmLoginUpdated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(397, 511)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.btnLogin)
