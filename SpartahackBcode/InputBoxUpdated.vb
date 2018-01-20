@@ -1,7 +1,8 @@
 ﻿Public Class InputBoxUpdated
 
     Dim title As String
-    Public Property TransparencyKey As Color
+    Public output As String = ""
+    Public sentOutput As Boolean = False
 
     Private Sub InputBoxUpdated_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
@@ -15,7 +16,16 @@
         txtFileLink.BackColor = Color.Transparent
     End Sub
 
-    Public Sub New(str As String)
+    Public Sub setText(str As String)
+        lblFile.Text = str
+    End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+
+        sentOutput = True
+        output = txtFileLink.Text
+        Me.Close()
 
     End Sub
+
 End Class
