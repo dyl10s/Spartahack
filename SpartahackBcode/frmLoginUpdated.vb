@@ -11,22 +11,27 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim sqlCon As New sqlManager
+        If (txtEmail.Text = Nothing & txtPassword.Text = Nothing) Then
+            MsgBox("Please use an email and password.")
+        Else
+            Dim sqlCon As New sqlManager
 
-        Try
-            Dim rawData As String = sqlCon.getData("Select fName, lName, Email from users where email = " + txtEmail.Text + " and password = " + txtPassword.Text, 3)
+            Try
+                Dim rawData As String = sqlCon.getData("Select fName, lName, Email from users where email = " + txtEmail.Text + " and password = " + txtPassword.Text, 3)
 
-            Dim fName As String = rawData.Split("~")(0)
-            Dim lName As String = rawData.Split("~")(1)
-            Dim email As String = rawData.Split("~")(2)
-            Dim bcode As String = rawData.Split("~")(3)
+                Dim fName As String = rawData.Split("~")(0)
+                Dim lName As String = rawData.Split("~")(1)
+                Dim email As String = rawData.Split("~")(2)
+                Dim bcode As String = rawData.Split("~")(3)
 
-            Dim clsUser As New clsUser(fName, lName, email, bcode)
+                Dim clsUser As New clsUser(fName, lName, email, bcode)
 
 
-        Catch ex As Exception
+            Catch ex As Exception
 
-        End Try
+            End Try
+        End If
+
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
