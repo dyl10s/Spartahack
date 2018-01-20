@@ -198,7 +198,7 @@ Partial Class frmMainUpdated
         Me.btnSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnSignOut.TabIndex = 0
         Me.btnSignOut.TabStop = False
-        Me.btnSignOut.Zoom = 10
+        Me.btnSignOut.Zoom = 0
         '
         'pFile
         '
@@ -358,7 +358,7 @@ Partial Class frmMainUpdated
         Me.btnFileUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnFileUpload.TabIndex = 1
         Me.btnFileUpload.TabStop = False
-        Me.btnFileUpload.Zoom = 10
+        Me.btnFileUpload.Zoom = 0
         '
         'btnLink
         '
@@ -372,7 +372,7 @@ Partial Class frmMainUpdated
         Me.btnLink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnLink.TabIndex = 2
         Me.btnLink.TabStop = False
-        Me.btnLink.Zoom = 10
+        Me.btnLink.Zoom = 0
         '
         'lblUploadFile
         '

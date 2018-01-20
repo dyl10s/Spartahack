@@ -134,6 +134,12 @@
     <Compile Include="frmRegisterUpdated.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InputBoxUpdated.Designer.vb">
+      <DependentUpon>InputBoxUpdated.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InputBoxUpdated.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
