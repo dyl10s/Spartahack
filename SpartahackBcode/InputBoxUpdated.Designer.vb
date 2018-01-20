@@ -94,7 +94,7 @@ Partial Class InputBoxUpdated
         '
         'txtFileLink
         '
-        Me.txtFileLink.BackColor = System.Drawing.Color.White
+        Me.txtFileLink.BackColor = System.Drawing.Color.Silver
         Me.txtFileLink.BorderColorFocused = System.Drawing.Color.Black
         Me.txtFileLink.BorderColorIdle = System.Drawing.Color.Black
         Me.txtFileLink.BorderColorMouseHover = System.Drawing.Color.Black
