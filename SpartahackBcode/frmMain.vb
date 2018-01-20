@@ -78,7 +78,6 @@ Public Class frmMain
                     item.lblTitle.Text = i.Split("~")(3)
                 End If
 
-                'extractThumbnail.GetThumbnail(System.AppDomain.CurrentDomain.BaseDirectory() + i.Split("~")(1).Split("/")(i.Split("~")(1).Split("/").Length - 1))
                 FlowLayoutPanel1.Controls.Add(item)
                 Me.cons.Add(item)
             End If
