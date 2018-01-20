@@ -43,13 +43,19 @@ Public Class sqlManager
 
             Next
 
-            returnValue += ":"
+            returnValue += ";"
 
         End While
 
         Return returnValue
 
     End Function
+
+    Public Sub close()
+
+        db.Close()
+
+    End Sub
 
 
 End Class

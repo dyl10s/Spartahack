@@ -11,19 +11,21 @@
 
         Dim sqlCon As New sqlManager
 
-        Try
-            Dim rawData As String = sqlCon.getData("Select fName, lName, Email from users where email = " + txtEmail.Text + " and password = " + txtPassword.Text, 3)
 
-            Dim fName As String = rawData.Split("~")(0)
+        Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPassword.Text + "'", 4)
+
+        Dim fName As String = rawData.Split("~")(0)
             Dim lName As String = rawData.Split("~")(1)
             Dim email As String = rawData.Split("~")(2)
+            Dim bCode As String = rawData.Split("~")(3)
 
-            Dim clsUser As New clsUser(fName, lName, email)
+            Dim clsUser As New clsUser(fName, lName, email, bCode)
+            Dim frmMain As New frmMain
+            frmMain.user = clsUser
+            frmMain.Show()
+        Me.Hide()
 
-
-        Catch ex As Exception
-
-        End Try
+        sqlCon.close()
 
     End Sub
 End Class

@@ -23,8 +23,8 @@ Partial Class connections
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbPreview = New System.Windows.Forms.PictureBox()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.pbPreview = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.pbPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -38,15 +38,6 @@ Partial Class connections
         Me.Panel1.Size = New System.Drawing.Size(150, 45)
         Me.Panel1.TabIndex = 0
         '
-        'pbPreview
-        '
-        Me.pbPreview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbPreview.Location = New System.Drawing.Point(0, 45)
-        Me.pbPreview.Name = "pbPreview"
-        Me.pbPreview.Size = New System.Drawing.Size(150, 147)
-        Me.pbPreview.TabIndex = 1
-        Me.pbPreview.TabStop = False
-        '
         'lblTitle
         '
         Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill
@@ -56,6 +47,16 @@ Partial Class connections
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "N/A"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'pbPreview
+        '
+        Me.pbPreview.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.pbPreview.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pbPreview.Location = New System.Drawing.Point(0, 45)
+        Me.pbPreview.Name = "pbPreview"
+        Me.pbPreview.Size = New System.Drawing.Size(150, 147)
+        Me.pbPreview.TabIndex = 1
+        Me.pbPreview.TabStop = False
         '
         'connections
         '
