@@ -27,9 +27,10 @@ Partial Class connections
         '
         'lblTitle
         '
-        Me.lblTitle.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.lblTitle.BackColor = System.Drawing.Color.Navy
         Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Cooper Black", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.ForeColor = System.Drawing.Color.White
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(150, 116)
