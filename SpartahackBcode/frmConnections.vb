@@ -15,9 +15,13 @@
 
         If lbConnections.SelectedItem <> Nothing Then
 
-            mainForm.Panel2.Visible = True
+            mainForm.pFile.Visible = True
             mainForm.addNew(lbConnections.SelectedItem.ToString, "file")
         End If
+
+    End Sub
+
+    Private Sub lbConnections_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbConnections.SelectedIndexChanged
 
     End Sub
 End Class
