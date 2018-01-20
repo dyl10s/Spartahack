@@ -63,9 +63,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _Exit() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Exit", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property ajax_loader_1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ajax-loader_1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Garbage() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Garbage", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

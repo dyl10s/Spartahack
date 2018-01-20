@@ -8,6 +8,7 @@
         btnLogin.Left = (Me.ClientSize.Width / 2) - (btnLogin.Width / 2)
         btnRegister.Left = (Me.ClientSize.Width / 2) - (btnRegister.Width / 2)
         pbLoader.Left = (Me.ClientSize.Width / 2) - (pbLoader.Width / 2)
+        pbLogo.Left = (Me.ClientSize.Width / 2) - (pbLogo.Width / 2)
 
     End Sub
 
@@ -24,7 +25,7 @@
         Dim bCode As String = rawData.Split("~")(3)
 
         Dim clsUser As New clsUser(fName, lName, email, bCode)
-        Dim frmMain As New frmMain
+        Dim frmMain As New frmMainUpdated
 
         frmMain.user = clsUser
         frmMain.Show()

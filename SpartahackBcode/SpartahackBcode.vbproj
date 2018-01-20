@@ -117,6 +117,12 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMainUpdated.Designer.vb">
+      <DependentUpon>frmMainUpdated.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainUpdated.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmRegister.Designer.vb">
       <DependentUpon>frmRegister.vb</DependentUpon>
     </Compile>
@@ -162,6 +168,9 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMainUpdated.resx">
+      <DependentUpon>frmMainUpdated.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.vb</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +209,8 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\Garbage.png" />
+    <None Include="Resources\Exit.png" />
     <None Include="Resources\ajax-loader_1.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

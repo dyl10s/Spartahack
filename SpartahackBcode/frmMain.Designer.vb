@@ -26,19 +26,19 @@ Partial Class frmMain
         Me.btnFile = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnLink = New System.Windows.Forms.Button()
         Me.pFile = New System.Windows.Forms.Panel()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnBrowse = New System.Windows.Forms.Button()
         Me.lblType = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.txtInfo = New System.Windows.Forms.TextBox()
-        Me.btnBrowse = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.pLink = New System.Windows.Forms.Panel()
+        Me.btnDeleteLink = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSubmitLink = New System.Windows.Forms.Button()
         Me.txtInfoLink = New System.Windows.Forms.TextBox()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnDeleteLink = New System.Windows.Forms.Button()
-        Me.btnLink = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.pFile.SuspendLayout()
         Me.pLink.SuspendLayout()
@@ -81,6 +81,15 @@ Partial Class frmMain
         Me.Panel1.Size = New System.Drawing.Size(893, 68)
         Me.Panel1.TabIndex = 3
         '
+        'btnLink
+        '
+        Me.btnLink.Location = New System.Drawing.Point(213, 21)
+        Me.btnLink.Name = "btnLink"
+        Me.btnLink.Size = New System.Drawing.Size(114, 23)
+        Me.btnLink.TabIndex = 2
+        Me.btnLink.Text = "Add Link"
+        Me.btnLink.UseVisualStyleBackColor = True
+        '
         'pFile
         '
         Me.pFile.Controls.Add(Me.btnDelete)
@@ -94,6 +103,24 @@ Partial Class frmMain
         Me.pFile.Size = New System.Drawing.Size(893, 46)
         Me.pFile.TabIndex = 4
         Me.pFile.Visible = False
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(776, 11)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(111, 23)
+        Me.btnDelete.TabIndex = 4
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnBrowse
+        '
+        Me.btnBrowse.Location = New System.Drawing.Point(614, 12)
+        Me.btnBrowse.Name = "btnBrowse"
+        Me.btnBrowse.Size = New System.Drawing.Size(39, 23)
+        Me.btnBrowse.TabIndex = 3
+        Me.btnBrowse.Text = "..."
+        Me.btnBrowse.UseVisualStyleBackColor = True
         '
         'lblType
         '
@@ -120,15 +147,6 @@ Partial Class frmMain
         Me.txtInfo.Size = New System.Drawing.Size(515, 20)
         Me.txtInfo.TabIndex = 0
         '
-        'btnBrowse
-        '
-        Me.btnBrowse.Location = New System.Drawing.Point(614, 12)
-        Me.btnBrowse.Name = "btnBrowse"
-        Me.btnBrowse.Size = New System.Drawing.Size(39, 23)
-        Me.btnBrowse.TabIndex = 3
-        Me.btnBrowse.Text = "..."
-        Me.btnBrowse.UseVisualStyleBackColor = True
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
@@ -145,6 +163,15 @@ Partial Class frmMain
         Me.pLink.Size = New System.Drawing.Size(893, 49)
         Me.pLink.TabIndex = 5
         Me.pLink.Visible = False
+        '
+        'btnDeleteLink
+        '
+        Me.btnDeleteLink.Location = New System.Drawing.Point(776, 15)
+        Me.btnDeleteLink.Name = "btnDeleteLink"
+        Me.btnDeleteLink.Size = New System.Drawing.Size(111, 23)
+        Me.btnDeleteLink.TabIndex = 7
+        Me.btnDeleteLink.Text = "Delete"
+        Me.btnDeleteLink.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -170,33 +197,6 @@ Partial Class frmMain
         Me.txtInfoLink.Name = "txtInfoLink"
         Me.txtInfoLink.Size = New System.Drawing.Size(560, 20)
         Me.txtInfoLink.TabIndex = 4
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Location = New System.Drawing.Point(776, 11)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(111, 23)
-        Me.btnDelete.TabIndex = 4
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnDeleteLink
-        '
-        Me.btnDeleteLink.Location = New System.Drawing.Point(776, 15)
-        Me.btnDeleteLink.Name = "btnDeleteLink"
-        Me.btnDeleteLink.Size = New System.Drawing.Size(111, 23)
-        Me.btnDeleteLink.TabIndex = 7
-        Me.btnDeleteLink.Text = "Delete"
-        Me.btnDeleteLink.UseVisualStyleBackColor = True
-        '
-        'btnLink
-        '
-        Me.btnLink.Location = New System.Drawing.Point(213, 21)
-        Me.btnLink.Name = "btnLink"
-        Me.btnLink.Size = New System.Drawing.Size(114, 23)
-        Me.btnLink.TabIndex = 2
-        Me.btnLink.Text = "Add Link"
-        Me.btnLink.UseVisualStyleBackColor = True
         '
         'frmMain
         '

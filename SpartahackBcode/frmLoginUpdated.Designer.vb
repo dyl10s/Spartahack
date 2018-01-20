@@ -29,13 +29,15 @@ Partial Class frmLoginUpdated
         Me.txtPassword = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.pbLoader = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbLoader = New System.Windows.Forms.PictureBox()
+        Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.pbLogo = New System.Windows.Forms.PictureBox()
         CType(Me.pbLoader, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -151,33 +153,14 @@ Partial Class frmLoginUpdated
         Me.btnRegister.Textcolor = System.Drawing.Color.Black
         Me.btnRegister.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'btnExit
+        'Button1
         '
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
-        Me.btnExit.ImageActive = Nothing
-        Me.btnExit.Location = New System.Drawing.Point(360, 0)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(35, 35)
-        Me.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnExit.TabIndex = 5
-        Me.btnExit.TabStop = False
-        Me.btnExit.Zoom = 10
-        '
-        'btnMin
-        '
-        Me.btnMin.BackColor = System.Drawing.Color.Transparent
-        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMin.Image = CType(resources.GetObject("btnMin.Image"), System.Drawing.Image)
-        Me.btnMin.ImageActive = Nothing
-        Me.btnMin.Location = New System.Drawing.Point(319, 0)
-        Me.btnMin.Name = "btnMin"
-        Me.btnMin.Size = New System.Drawing.Size(35, 35)
-        Me.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMin.TabIndex = 6
-        Me.btnMin.TabStop = False
-        Me.btnMin.Zoom = 10
+        Me.Button1.Location = New System.Drawing.Point(338, 447)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(47, 48)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'pbLoader
         '
@@ -190,14 +173,43 @@ Partial Class frmLoginUpdated
         Me.pbLoader.TabStop = False
         Me.pbLoader.Visible = False
         '
-        'Button1
+        'btnMin
         '
-        Me.Button1.Location = New System.Drawing.Point(338, 447)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(47, 48)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnMin.BackColor = System.Drawing.Color.Transparent
+        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMin.Image = CType(resources.GetObject("btnMin.Image"), System.Drawing.Image)
+        Me.btnMin.ImageActive = Nothing
+        Me.btnMin.Location = New System.Drawing.Point(318, 6)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Size = New System.Drawing.Size(30, 30)
+        Me.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMin.TabIndex = 6
+        Me.btnMin.TabStop = False
+        Me.btnMin.Zoom = 10
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
+        Me.btnExit.ImageActive = Nothing
+        Me.btnExit.Location = New System.Drawing.Point(357, 3)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(35, 35)
+        Me.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabStop = False
+        Me.btnExit.Zoom = 10
+        '
+        'pbLogo
+        '
+        Me.pbLogo.Image = CType(resources.GetObject("pbLogo.Image"), System.Drawing.Image)
+        Me.pbLogo.Location = New System.Drawing.Point(-50, 14)
+        Me.pbLogo.Name = "pbLogo"
+        Me.pbLogo.Size = New System.Drawing.Size(489, 193)
+        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbLogo.TabIndex = 9
+        Me.pbLogo.TabStop = False
         '
         'frmLoginUpdated
         '
@@ -213,12 +225,14 @@ Partial Class frmLoginUpdated
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.pbLogo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmLoginUpdated"
         Me.Text = "frmLoginUpdated"
-        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLoader, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -232,4 +246,5 @@ Partial Class frmLoginUpdated
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents pbLoader As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents pbLogo As PictureBox
 End Class
