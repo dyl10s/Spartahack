@@ -1,8 +1,8 @@
 ﻿Public Class clsUser
 
-    Dim fName As String = ""
-    Dim lName As String = ""
-    Dim email As String = ""
+    Public fName As String = ""
+    Public lName As String = ""
+    Public email As String = ""
 
     Public Sub New(firstName As String, LastName As String, Email As String)
 
