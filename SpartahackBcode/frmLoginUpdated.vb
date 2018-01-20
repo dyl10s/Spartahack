@@ -33,4 +33,12 @@
         Dim frmReg As New frmRegister
         frmReg.Show()
     End Sub
+
+    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+    End Sub
 End Class
