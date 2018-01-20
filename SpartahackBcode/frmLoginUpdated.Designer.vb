@@ -36,7 +36,7 @@ Partial Class frmLoginUpdated
         '
         Me.txtUser.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtUser.BorderColorIdle = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtUser.BorderColorMouseHover = System.Drawing.Color.Blue
+        Me.txtUser.BorderColorMouseHover = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtUser.BorderThickness = 3
         Me.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtUser.Font = New System.Drawing.Font("Century Gothic", 9.75!)
@@ -47,7 +47,7 @@ Partial Class frmLoginUpdated
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(370, 44)
         Me.txtUser.TabIndex = 0
-        Me.txtUser.Text = "BunifuMetroTextbox1"
+        Me.txtUser.Text = "Username"
         Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'frmLoginUpdated
