@@ -7,31 +7,30 @@
         txtPassword.Left = (Me.ClientSize.Width / 2) - (txtPassword.Width / 2)
         btnLogin.Left = (Me.ClientSize.Width / 2) - (btnLogin.Width / 2)
         btnRegister.Left = (Me.ClientSize.Width / 2) - (btnRegister.Width / 2)
+        pbLoader.Left = (Me.ClientSize.Width / 2) - (pbLoader.Width / 2)
 
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If (txtEmail.Text = Nothing & txtPassword.Text = Nothing) Then
-            MsgBox("Please use an email and password.")
-        Else
-            Dim sqlCon As New sqlManager
+        pbLoader.Visible = True
 
-            Try
-                Dim rawData As String = sqlCon.getData("Select fName, lName, Email from users where email = " + txtEmail.Text + " and password = " + txtPassword.Text, 3)
+        Dim sqlCon As New sqlManager
 
-                Dim fName As String = rawData.Split("~")(0)
-                Dim lName As String = rawData.Split("~")(1)
-                Dim email As String = rawData.Split("~")(2)
-                Dim bcode As String = rawData.Split("~")(3)
+        Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPassword.Text + "'", 4)
 
-                Dim clsUser As New clsUser(fName, lName, email, bcode)
+        Dim fName As String = rawData.Split("~")(0)
+        Dim lName As String = rawData.Split("~")(1)
+        Dim email As String = rawData.Split("~")(2)
+        Dim bCode As String = rawData.Split("~")(3)
 
+        Dim clsUser As New clsUser(fName, lName, email, bCode)
+        Dim frmMain As New frmMain
 
-            Catch ex As Exception
+        frmMain.user = clsUser
+        frmMain.Show()
+        Me.Hide()
 
-            End Try
-        End If
-
+        sqlCon.close()
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -46,5 +45,10 @@
 
     Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        txtEmail.Text = "achlebek17@gmail.com"
+        txtPassword.Text = "adam4"
     End Sub
 End Class

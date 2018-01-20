@@ -31,8 +31,11 @@ Partial Class frmLoginUpdated
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.pbLoader = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLoader, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -176,12 +179,34 @@ Partial Class frmLoginUpdated
         Me.btnMin.TabStop = False
         Me.btnMin.Zoom = 10
         '
+        'pbLoader
+        '
+        Me.pbLoader.Image = CType(resources.GetObject("pbLoader.Image"), System.Drawing.Image)
+        Me.pbLoader.Location = New System.Drawing.Point(140, 318)
+        Me.pbLoader.Name = "pbLoader"
+        Me.pbLoader.Size = New System.Drawing.Size(100, 34)
+        Me.pbLoader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.pbLoader.TabIndex = 7
+        Me.pbLoader.TabStop = False
+        Me.pbLoader.Visible = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(338, 447)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(47, 48)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmLoginUpdated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ClientSize = New System.Drawing.Size(397, 511)
+        Me.ClientSize = New System.Drawing.Size(397, 507)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.pbLoader)
         Me.Controls.Add(Me.btnMin)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRegister)
@@ -193,6 +218,7 @@ Partial Class frmLoginUpdated
         Me.Text = "frmLoginUpdated"
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLoader, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -204,4 +230,6 @@ Partial Class frmLoginUpdated
     Friend WithEvents btnRegister As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnMin As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents pbLoader As PictureBox
+    Friend WithEvents Button1 As Button
 End Class

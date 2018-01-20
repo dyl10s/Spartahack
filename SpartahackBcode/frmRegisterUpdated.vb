@@ -41,13 +41,15 @@
 
             Try
                 sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBCODE.Text))
+
+                Dim form As New frmLoginUpdated
+                form.Show()
+                Me.Hide()
             Catch ex As Exception
                 MsgBox("Registration Failed")
             End Try
 
-            Dim login As New frmLoginUpdated
-            login.Show()
-            Me.Close()
+
         End If
     End Sub
 End Class
