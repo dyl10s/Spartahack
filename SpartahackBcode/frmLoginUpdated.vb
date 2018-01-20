@@ -31,15 +31,15 @@
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Me.Hide()
-        Dim frmReg As New frmRegister
+        Dim frmReg As New frmRegisterUpdated
         frmReg.Show()
     End Sub
 
-    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
-        Me.Close()
+    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
     End Sub
 
-    Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
+    Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 End Class

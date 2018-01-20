@@ -29,10 +29,10 @@ Partial Class frmLoginUpdated
         Me.txtPassword = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.BunifuImageButton2 = New Bunifu.Framework.UI.BunifuImageButton()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
+        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -148,33 +148,33 @@ Partial Class frmLoginUpdated
         Me.btnRegister.Textcolor = System.Drawing.Color.Black
         Me.btnRegister.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuImageButton1
+        'btnExit
         '
-        Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
-        Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(360, 0)
-        Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(35, 35)
-        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton1.TabIndex = 5
-        Me.BunifuImageButton1.TabStop = False
-        Me.BunifuImageButton1.Zoom = 10
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
+        Me.btnExit.ImageActive = Nothing
+        Me.btnExit.Location = New System.Drawing.Point(360, 0)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(35, 35)
+        Me.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabStop = False
+        Me.btnExit.Zoom = 10
         '
-        'BunifuImageButton2
+        'btnMin
         '
-        Me.BunifuImageButton2.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuImageButton2.Image = CType(resources.GetObject("BunifuImageButton2.Image"), System.Drawing.Image)
-        Me.BunifuImageButton2.ImageActive = Nothing
-        Me.BunifuImageButton2.Location = New System.Drawing.Point(319, 0)
-        Me.BunifuImageButton2.Name = "BunifuImageButton2"
-        Me.BunifuImageButton2.Size = New System.Drawing.Size(35, 35)
-        Me.BunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton2.TabIndex = 6
-        Me.BunifuImageButton2.TabStop = False
-        Me.BunifuImageButton2.Zoom = 10
+        Me.btnMin.BackColor = System.Drawing.Color.Transparent
+        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMin.Image = CType(resources.GetObject("btnMin.Image"), System.Drawing.Image)
+        Me.btnMin.ImageActive = Nothing
+        Me.btnMin.Location = New System.Drawing.Point(319, 0)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Size = New System.Drawing.Size(35, 35)
+        Me.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMin.TabIndex = 6
+        Me.btnMin.TabStop = False
+        Me.btnMin.Zoom = 10
         '
         'frmLoginUpdated
         '
@@ -182,8 +182,8 @@ Partial Class frmLoginUpdated
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(397, 511)
-        Me.Controls.Add(Me.BunifuImageButton2)
-        Me.Controls.Add(Me.BunifuImageButton1)
+        Me.Controls.Add(Me.btnMin)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
@@ -191,8 +191,8 @@ Partial Class frmLoginUpdated
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmLoginUpdated"
         Me.Text = "frmLoginUpdated"
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -202,6 +202,6 @@ Partial Class frmLoginUpdated
     Friend WithEvents txtPassword As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents btnLogin As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnRegister As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuImageButton2 As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents btnMin As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
 End Class
