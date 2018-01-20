@@ -3,7 +3,7 @@
 Public Class frmMainUpdated
 
     Dim cons As New List(Of connections)
-    Dim connect As connections
+    Public connect As connections
     Public user As clsUser
 
     Private Sub frmMainUpdated_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -24,7 +24,7 @@ Public Class frmMainUpdated
 
         For Each i As String In cons
             If i <> "" Then
-                Dim item As New connections
+                Dim item As New connections(Me)
                 item.type = i.Split("~")(0)
 
                 If item.type = "file" Then
@@ -66,12 +66,12 @@ Public Class frmMainUpdated
     End Sub
 
     Private Sub btnUploadFile_Click(sender As Object, e As EventArgs)
-        addNew(InputBoxUpdated("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
+        addNew(InputBox("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
     End Sub
 
     Public Sub addNew(name As String, type As String)
 
-        connect = New connections
+        connect = New connections(Me)
         connect.lblTitle.Text = name
         connect.textData = name
         connect.type = type
@@ -79,28 +79,31 @@ Public Class frmMainUpdated
 
         If type = "link" Then
             pLink.Show()
+            pFile.Hide()
         End If
 
         If type = "file" Then
             pFile.Show()
+            pLink.Hide()
         End If
 
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblUploadFile.Click
-        addNew(InputBoxUpdated("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
+
+        addNew(InputBox("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
     End Sub
 
     Private Sub lblConnectLink_Click(sender As Object, e As EventArgs) Handles lblConnectLink.Click
-        addNew(InputBoxUpdated("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
+        addNew(InputBox("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
     End Sub
 
     Private Sub btnFileUpload_Click(sender As Object, e As EventArgs) Handles btnFileUpload.Click
-        addNew(InputBoxUpdated("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
+        addNew(InputBox("What would you like your file named (Ex. Resume, Buisiness Card)"), "file")
     End Sub
 
     Private Sub BunifuImageButton4_Click(sender As Object, e As EventArgs) Handles btnLink.Click
-        addNew(InputBoxUpdated("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
+        addNew(InputBox("What would you like your link named (Ex. Linked In, Personal Website)"), "link")
     End Sub
 
     Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles Label1.Click
@@ -121,5 +124,31 @@ Public Class frmMainUpdated
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             txtFileLink.Text = OpenFileDialog1.FileName
         End If
+    End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+
+        Dim client As WebClient = New WebClient
+        client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
+        Dim ftpLocation As String = "ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + txtFileLink.Text.Split(".")(txtFileLink.Text.Split(".").Count - 1)
+        client.UploadFile("ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + txtFileLink.Text.Split(".")(txtFileLink.Text.Split(".").Count - 1), txtFileLink.Text)
+
+        Dim sqlCon As New sqlManager
+        sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + ftpLocation + "', '" + user.bCode + "' , '" + connect.textData + "')")
+
+        MsgBox("Upload Complete")
+        pFile.Visible = False
+        pLink.Visible = False
+        Me.cons.Add(connect)
+        FlowLayoutPanel1.Controls.Add(connect)
+        sqlCon.close()
+
+    End Sub
+
+    Private Sub FlowLayoutPanel1_Click(sender As Object, e As EventArgs) Handles FlowLayoutPanel1.Click
+
+        pLink.Hide()
+        pFile.Hide()
+
     End Sub
 End Class

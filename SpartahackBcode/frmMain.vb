@@ -16,7 +16,7 @@ Public Class frmMain
 
     Public Sub addNew(name As String, type As String)
 
-        connect = New connections
+        'connect = New connections
         connect.lblTitle.Text = name
         connect.textData = name
         connect.type = type
@@ -67,7 +67,7 @@ Public Class frmMain
 
         For Each i As String In cons
             If i <> "" Then
-                Dim item As New connections
+                Dim item As connections
                 item.type = i.Split("~")(0)
 
                 If item.type = "file" Then

@@ -263,7 +263,7 @@ Partial Class frmMainUpdated
         Me.btnLink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnLink.TabIndex = 2
         Me.btnLink.TabStop = False
-        Me.btnLink.Zoom = 10
+        Me.btnLink.Zoom = 0
         '
         'btnFileUpload
         '
@@ -277,7 +277,7 @@ Partial Class frmMainUpdated
         Me.btnFileUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnFileUpload.TabIndex = 1
         Me.btnFileUpload.TabStop = False
-        Me.btnFileUpload.Zoom = 10
+        Me.btnFileUpload.Zoom = 0
         '
         'btnSignOut
         '
@@ -438,88 +438,6 @@ Partial Class frmMainUpdated
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(861, 340)
         Me.FlowLayoutPanel1.TabIndex = 3
-        '
-        'OpenFileDialog1
-        '
-        Me.btnFileUpload.BackColor = System.Drawing.Color.Transparent
-        Me.btnFileUpload.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnFileUpload.Image = CType(resources.GetObject("btnFileUpload.Image"), System.Drawing.Image)
-        Me.btnFileUpload.ImageActive = Nothing
-        Me.btnFileUpload.Location = New System.Drawing.Point(388, 16)
-        Me.btnFileUpload.Name = "btnFileUpload"
-        Me.btnFileUpload.Size = New System.Drawing.Size(30, 30)
-        Me.btnFileUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnFileUpload.TabIndex = 1
-        Me.btnFileUpload.TabStop = False
-        Me.btnFileUpload.Zoom = 0
-        '
-        'btnLink
-        '
-        Me.btnLink.BackColor = System.Drawing.Color.Transparent
-        Me.btnLink.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLink.Image = CType(resources.GetObject("btnLink.Image"), System.Drawing.Image)
-        Me.btnLink.ImageActive = Nothing
-        Me.btnLink.Location = New System.Drawing.Point(181, 16)
-        Me.btnLink.Name = "btnLink"
-        Me.btnLink.Size = New System.Drawing.Size(30, 30)
-        Me.btnLink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnLink.TabIndex = 2
-        Me.btnLink.TabStop = False
-        Me.btnLink.Zoom = 0
-        '
-        'lblUploadFile
-        '
-        Me.lblUploadFile.AutoSize = True
-        Me.lblUploadFile.BackColor = System.Drawing.Color.Transparent
-        Me.lblUploadFile.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblUploadFile.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUploadFile.Location = New System.Drawing.Point(424, 21)
-        Me.lblUploadFile.Name = "lblUploadFile"
-        Me.lblUploadFile.Size = New System.Drawing.Size(122, 21)
-        Me.lblUploadFile.TabIndex = 21
-        Me.lblUploadFile.Text = "Upload File"
-        '
-        'lblConnectLink
-        '
-        Me.lblConnectLink.AutoSize = True
-        Me.lblConnectLink.BackColor = System.Drawing.Color.Transparent
-        Me.lblConnectLink.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblConnectLink.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblConnectLink.Location = New System.Drawing.Point(217, 21)
-        Me.lblConnectLink.Name = "lblConnectLink"
-        Me.lblConnectLink.Size = New System.Drawing.Size(141, 21)
-        Me.lblConnectLink.TabIndex = 22
-        Me.lblConnectLink.Text = "Connect Link"
-        '
-        'btnMin
-        '
-        Me.btnMin.BackColor = System.Drawing.Color.Transparent
-        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMin.Image = CType(resources.GetObject("btnMin.Image"), System.Drawing.Image)
-        Me.btnMin.ImageActive = Nothing
-        Me.btnMin.Location = New System.Drawing.Point(786, 4)
-        Me.btnMin.Name = "btnMin"
-        Me.btnMin.Size = New System.Drawing.Size(30, 30)
-        Me.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMin.TabIndex = 24
-        Me.btnMin.TabStop = False
-        Me.btnMin.Zoom = 10
-        '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
-        Me.btnExit.ImageActive = Nothing
-        Me.btnExit.Location = New System.Drawing.Point(825, 1)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(35, 35)
-        Me.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnExit.TabIndex = 23
-        Me.btnExit.TabStop = False
-        Me.btnExit.Zoom = 10
-        '
-        'Label1
         '
         'frmMainUpdated
         '
