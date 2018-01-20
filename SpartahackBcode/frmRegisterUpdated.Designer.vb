@@ -151,7 +151,6 @@ Partial Class frmLoginUpdated
         'BunifuImageButton1
         '
         Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
         Me.BunifuImageButton1.ImageActive = Nothing
         Me.BunifuImageButton1.Location = New System.Drawing.Point(360, 0)
@@ -165,7 +164,6 @@ Partial Class frmLoginUpdated
         'BunifuImageButton2
         '
         Me.BunifuImageButton2.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuImageButton2.Image = CType(resources.GetObject("BunifuImageButton2.Image"), System.Drawing.Image)
         Me.BunifuImageButton2.ImageActive = Nothing
         Me.BunifuImageButton2.Location = New System.Drawing.Point(319, 0)
