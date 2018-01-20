@@ -1,9 +1,9 @@
 ﻿Public Class frmRegisterUpdated
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub btnExit_Click(sender As Object, e As EventArgs)
         Application.Exit()
     End Sub
 
-    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs)
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 
@@ -31,10 +31,6 @@
         frmLoginUpdated.Show()
     End Sub
 
-    Private Sub txtEmail_OnValueChanged(sender As Object, e As EventArgs) Handles txtEmail.OnValueChanged
-
-    End Sub
-
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         If (txtPass.Text = txtRetryPass.Text) Then
             Dim sqlCon As New sqlManager
@@ -51,5 +47,13 @@
 
 
         End If
+    End Sub
+
+    Private Sub btnExit_Click_1(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 End Class

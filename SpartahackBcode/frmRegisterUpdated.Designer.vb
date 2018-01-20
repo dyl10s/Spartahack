@@ -25,8 +25,6 @@ Partial Class frmRegisterUpdated
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRegisterUpdated))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.btnMinimize = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnBack = New Bunifu.Framework.UI.BunifuImageButton()
         Me.txtEmail = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.lblEmail = New System.Windows.Forms.Label()
@@ -41,9 +39,11 @@ Partial Class frmRegisterUpdated
         Me.txtBCODE = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.lblBCODE = New System.Windows.Forms.Label()
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
-        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -51,43 +51,15 @@ Partial Class frmRegisterUpdated
         Me.BunifuElipse1.ElipseRadius = 5
         Me.BunifuElipse1.TargetControl = Me
         '
-        'btnMinimize
-        '
-        Me.btnMinimize.BackColor = System.Drawing.Color.Transparent
-        Me.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMinimize.Image = CType(resources.GetObject("btnMinimize.Image"), System.Drawing.Image)
-        Me.btnMinimize.ImageActive = Nothing
-        Me.btnMinimize.Location = New System.Drawing.Point(448, 2)
-        Me.btnMinimize.Name = "btnMinimize"
-        Me.btnMinimize.Size = New System.Drawing.Size(35, 35)
-        Me.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMinimize.TabIndex = 8
-        Me.btnMinimize.TabStop = False
-        Me.btnMinimize.Zoom = 10
-        '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
-        Me.btnExit.ImageActive = Nothing
-        Me.btnExit.Location = New System.Drawing.Point(489, 2)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(35, 35)
-        Me.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnExit.TabIndex = 7
-        Me.btnExit.TabStop = False
-        Me.btnExit.Zoom = 10
-        '
         'btnBack
         '
         Me.btnBack.BackColor = System.Drawing.Color.Transparent
         Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
         Me.btnBack.ImageActive = Nothing
-        Me.btnBack.Location = New System.Drawing.Point(3, 2)
+        Me.btnBack.Location = New System.Drawing.Point(7, 6)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(51, 54)
+        Me.btnBack.Size = New System.Drawing.Size(30, 31)
         Me.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnBack.TabIndex = 9
         Me.btnBack.TabStop = False
@@ -298,12 +270,42 @@ Partial Class frmRegisterUpdated
         Me.btnRegister.Textcolor = System.Drawing.Color.Black
         Me.btnRegister.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'btnMin
+        '
+        Me.btnMin.BackColor = System.Drawing.Color.Transparent
+        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMin.Image = CType(resources.GetObject("btnMin.Image"), System.Drawing.Image)
+        Me.btnMin.ImageActive = Nothing
+        Me.btnMin.Location = New System.Drawing.Point(452, 5)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Size = New System.Drawing.Size(30, 30)
+        Me.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnMin.TabIndex = 24
+        Me.btnMin.TabStop = False
+        Me.btnMin.Zoom = 10
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
+        Me.btnExit.ImageActive = Nothing
+        Me.btnExit.Location = New System.Drawing.Point(491, 2)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(35, 35)
+        Me.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnExit.TabIndex = 23
+        Me.btnExit.TabStop = False
+        Me.btnExit.Zoom = 10
+        '
         'frmRegisterUpdated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.ClientSize = New System.Drawing.Size(528, 462)
+        Me.Controls.Add(Me.btnMin)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.lblBCODE)
         Me.Controls.Add(Me.txtBCODE)
@@ -318,22 +320,18 @@ Partial Class frmRegisterUpdated
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.btnMinimize)
-        Me.Controls.Add(Me.btnExit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmRegisterUpdated"
         Me.Text = "frmRegisterUpdated"
-        CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents btnMinimize As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnBack As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents lblEmail As Label
     Friend WithEvents txtEmail As Bunifu.Framework.UI.BunifuMetroTextbox
@@ -348,4 +346,6 @@ Partial Class frmRegisterUpdated
     Friend WithEvents lblBCODE As Label
     Friend WithEvents txtBCODE As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents btnRegister As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btnMin As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
 End Class
