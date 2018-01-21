@@ -27,7 +27,6 @@ Partial Class frmDownloadDialog
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.pnlTop = New System.Windows.Forms.Panel()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.pnlButtons = New System.Windows.Forms.Panel()
         Me.lblAddContact = New System.Windows.Forms.Label()
         Me.lblFullName = New System.Windows.Forms.Label()
         Me.pnlDLButt = New System.Windows.Forms.Panel()
@@ -36,10 +35,11 @@ Partial Class frmDownloadDialog
         Me.btnSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.btnBack = New Bunifu.Framework.UI.BunifuImageButton()
         Me.pnlTop.SuspendLayout()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlButtons.SuspendLayout()
         Me.pnlDLButt.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -50,7 +50,10 @@ Partial Class frmDownloadDialog
         'pnlTop
         '
         Me.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlTop.Controls.Add(Me.btnBack)
+        Me.pnlTop.Controls.Add(Me.lblAddContact)
         Me.pnlTop.Controls.Add(Me.btnExit)
+        Me.pnlTop.Controls.Add(Me.lblFullName)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
         Me.pnlTop.Name = "pnlTop"
@@ -71,22 +74,11 @@ Partial Class frmDownloadDialog
         Me.btnExit.TabStop = False
         Me.btnExit.Zoom = 10
         '
-        'pnlButtons
-        '
-        Me.pnlButtons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pnlButtons.Controls.Add(Me.lblAddContact)
-        Me.pnlButtons.Controls.Add(Me.lblFullName)
-        Me.pnlButtons.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlButtons.Location = New System.Drawing.Point(0, 48)
-        Me.pnlButtons.Name = "pnlButtons"
-        Me.pnlButtons.Size = New System.Drawing.Size(427, 68)
-        Me.pnlButtons.TabIndex = 2
-        '
         'lblAddContact
         '
         Me.lblAddContact.AutoSize = True
         Me.lblAddContact.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAddContact.Location = New System.Drawing.Point(166, 44)
+        Me.lblAddContact.Location = New System.Drawing.Point(162, 31)
         Me.lblAddContact.Name = "lblAddContact"
         Me.lblAddContact.Size = New System.Drawing.Size(77, 13)
         Me.lblAddContact.TabIndex = 1
@@ -96,7 +88,7 @@ Partial Class frmDownloadDialog
         '
         Me.lblFullName.AutoSize = True
         Me.lblFullName.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFullName.Location = New System.Drawing.Point(79, 13)
+        Me.lblFullName.Location = New System.Drawing.Point(75, 5)
         Me.lblFullName.Name = "lblFullName"
         Me.lblFullName.Size = New System.Drawing.Size(253, 21)
         Me.lblFullName.TabIndex = 0
@@ -230,11 +222,25 @@ Partial Class frmDownloadDialog
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.HotTrack
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 116)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 48)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(55, 30, 30, 30)
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(427, 307)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(427, 375)
         Me.FlowLayoutPanel1.TabIndex = 4
+        '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.Transparent
+        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
+        Me.btnBack.ImageActive = Nothing
+        Me.btnBack.Location = New System.Drawing.Point(6, 6)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(30, 31)
+        Me.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnBack.TabIndex = 41
+        Me.btnBack.TabStop = False
+        Me.btnBack.Zoom = 10
         '
         'frmDownloadDialog
         '
@@ -243,22 +249,20 @@ Partial Class frmDownloadDialog
         Me.ClientSize = New System.Drawing.Size(427, 499)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.pnlDLButt)
-        Me.Controls.Add(Me.pnlButtons)
         Me.Controls.Add(Me.pnlTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmDownloadDialog"
         Me.Text = "frmDownloadDialog"
         Me.pnlTop.ResumeLayout(False)
+        Me.pnlTop.PerformLayout()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlButtons.ResumeLayout(False)
-        Me.pnlButtons.PerformLayout()
         Me.pnlDLButt.ResumeLayout(False)
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents pnlButtons As Panel
     Friend WithEvents pnlTop As Panel
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents lblAddContact As Label
@@ -269,4 +273,5 @@ Partial Class frmDownloadDialog
     Friend WithEvents btnSave As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents btnBack As Bunifu.Framework.UI.BunifuImageButton
 End Class
