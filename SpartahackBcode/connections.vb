@@ -3,6 +3,7 @@
     Public type As String = ""
     Public textData As String = ""
     Public path As String = ""
+    Public id As Integer
 
     Public mainForm As frmMainUpdated
 
@@ -21,17 +22,24 @@
 
         If type = "file" Then
 
-            mainForm.pFile.Show()
-            mainForm.connect = Me
+            mainForm.txtFileLink.Text = ""
+            mainForm.txtInfoLink.Text = ""
             mainForm.pLink.Hide()
+            mainForm.pFile.Show()
+            mainForm.txtFileLink.Text = lblTitle.Text
+            mainForm.connect = Me
 
         End If
 
         If type = "link" Then
 
+            mainForm.txtFileLink.Text = ""
+            mainForm.txtInfoLink.Text = ""
+            mainForm.pFile.Hide()
             mainForm.pLink.Show()
             mainForm.connect = Me
-            mainForm.pFile.Hide()
+            mainForm.txtInfoLink.Text = textData
+
         End If
 
     End Sub
