@@ -31,29 +31,24 @@ Public Class frmBusinessBcode
 
         Dim connect As connections
         Dim sqlCon As New sqlManager
-        Dim data As String() = sqlCon.getData("Select * from connections where bCode ='" + txtCode.Text + "'", 5).Split(":")
+        Dim data As String() = sqlCon.getData("Select * from connections where bCode ='" + txtCode.Text + "'", 5).Split(";")
 
-        Dim type As String
-        Dim url As String
-        Dim name As String
+        Dim connections As New List(Of connections)
 
         For Each s As String In data
-            Dim dataString As String() = s.Split("~")
-            type = dataString(0)
-            url = dataString(1)
-            name = dataString(3)
+            If s <> "" Then
+                connect = New connections(Nothing)
+                Dim dataString As String() = s.Split("~")
+                connect.type = dataString(0)
+                connect.path = dataString(1)
+                connect.id = dataString(4)
+                connect.lblTitle.Text = dataString(3)
+                connections.Add(connect)
+            End If
         Next
 
-        If type = "link" Then
-            Dim fw As New System.IO.StreamWriter(System.IO.Directory.GetCurrentDirectory + "")
-        End If
-
-        If type = "file" Then
-            Dim client As WebClient = New WebClient
-            client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
-            'Dim ftpLocation As String = "ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + txtFileLink.Text.Split(".")(txtFileLink.Text.Split(".").Count - 1)
-            client.DownloadFile(url, System.IO.Directory.GetCurrentDirectory)
-        End If
+        Dim frmDisplay As New frmBusinessDisplay(connections)
+        frmDisplay.Show()
 
     End Sub
 End Class
