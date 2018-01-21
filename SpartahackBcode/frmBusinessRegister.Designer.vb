@@ -27,7 +27,7 @@ Partial Class frmBusinessRegister
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.lblBCODE = New System.Windows.Forms.Label()
-        Me.txtBCODE = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.txtBussinessName = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtLastName = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.lblFirstName = New System.Windows.Forms.Label()
@@ -99,22 +99,22 @@ Partial Class frmBusinessRegister
         Me.lblBCODE.TabIndex = 37
         Me.lblBCODE.Text = "Business Name"
         '
-        'txtBCODE
+        'txtBussinessName
         '
-        Me.txtBCODE.BorderColorFocused = System.Drawing.SystemColors.HotTrack
-        Me.txtBCODE.BorderColorIdle = System.Drawing.SystemColors.HotTrack
-        Me.txtBCODE.BorderColorMouseHover = System.Drawing.SystemColors.HotTrack
-        Me.txtBCODE.BorderThickness = 3
-        Me.txtBCODE.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtBCODE.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBCODE.ForeColor = System.Drawing.Color.Black
-        Me.txtBCODE.isPassword = False
-        Me.txtBCODE.Location = New System.Drawing.Point(82, 299)
-        Me.txtBCODE.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
-        Me.txtBCODE.Name = "txtBCODE"
-        Me.txtBCODE.Size = New System.Drawing.Size(342, 75)
-        Me.txtBCODE.TabIndex = 36
-        Me.txtBCODE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtBussinessName.BorderColorFocused = System.Drawing.SystemColors.HotTrack
+        Me.txtBussinessName.BorderColorIdle = System.Drawing.SystemColors.HotTrack
+        Me.txtBussinessName.BorderColorMouseHover = System.Drawing.SystemColors.HotTrack
+        Me.txtBussinessName.BorderThickness = 3
+        Me.txtBussinessName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtBussinessName.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBussinessName.ForeColor = System.Drawing.Color.Black
+        Me.txtBussinessName.isPassword = False
+        Me.txtBussinessName.Location = New System.Drawing.Point(82, 299)
+        Me.txtBussinessName.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
+        Me.txtBussinessName.Name = "txtBussinessName"
+        Me.txtBussinessName.Size = New System.Drawing.Size(342, 75)
+        Me.txtBussinessName.TabIndex = 36
+        Me.txtBussinessName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblLastName
         '
@@ -142,7 +142,7 @@ Partial Class frmBusinessRegister
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(235, 30)
         Me.txtLastName.TabIndex = 34
-        Me.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblFirstName
         '
@@ -170,14 +170,14 @@ Partial Class frmBusinessRegister
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(235, 30)
         Me.txtFirstName.TabIndex = 32
-        Me.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblRptPass
         '
         Me.lblRptPass.AutoSize = True
         Me.lblRptPass.Font = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRptPass.ForeColor = System.Drawing.Color.Gray
-        Me.lblRptPass.Location = New System.Drawing.Point(323, 136)
+        Me.lblRptPass.Location = New System.Drawing.Point(321, 136)
         Me.lblRptPass.Name = "lblRptPass"
         Me.lblRptPass.Size = New System.Drawing.Size(149, 19)
         Me.lblRptPass.TabIndex = 31
@@ -198,7 +198,7 @@ Partial Class frmBusinessRegister
         Me.txtRetryPass.Name = "txtRetryPass"
         Me.txtRetryPass.Size = New System.Drawing.Size(235, 30)
         Me.txtRetryPass.TabIndex = 30
-        Me.txtRetryPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtRetryPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblPassword
         '
@@ -226,7 +226,7 @@ Partial Class frmBusinessRegister
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(235, 30)
         Me.txtPass.TabIndex = 28
-        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblEmail
         '
@@ -254,7 +254,7 @@ Partial Class frmBusinessRegister
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(235, 30)
         Me.txtEmail.TabIndex = 26
-        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnMin
         '
@@ -308,7 +308,7 @@ Partial Class frmBusinessRegister
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.lblBCODE)
-        Me.Controls.Add(Me.txtBCODE)
+        Me.Controls.Add(Me.txtBussinessName)
         Me.Controls.Add(Me.lblLastName)
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.lblFirstName)
@@ -336,7 +336,7 @@ Partial Class frmBusinessRegister
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnRegister As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents lblBCODE As Label
-    Friend WithEvents txtBCODE As Bunifu.Framework.UI.BunifuMetroTextbox
+    Friend WithEvents txtBussinessName As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents lblLastName As Label
     Friend WithEvents txtLastName As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents lblFirstName As Label
