@@ -300,14 +300,4 @@ Public Class frmMainUpdated
         End If
 
     End Sub
-
-    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles btnOpenInBroswer.Click
-        Dim webAddress As String = txtInfoLink.Text
-
-        Process.Start(webAddress)
-    End Sub
-
-    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
-
-    End Sub
 End Class
