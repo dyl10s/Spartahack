@@ -81,7 +81,7 @@ Public Class frmMainUpdated
     Private Sub btnUploadFile_Click(sender As Object, e As EventArgs)
 
         Dim ib As New InputBoxUpdated()
-        ib.setText("What would you like your file named (Ex. Resume, Buisiness Card)")
+        ib.setText("What would you like your file name to be (Ex. Resume, Business Card)")
         ib.ShowDialog()
 
         If ib.sentOutput = True Then
@@ -115,7 +115,7 @@ Public Class frmMainUpdated
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblUploadFile.Click
 
         Dim ib As New InputBoxUpdated()
-        ib.setText("What would you like your file named (Ex. Resume, Buisiness Card)")
+        ib.setText("What would you like your file name to be (Ex. Resume, Business Card)")
         ib.ShowDialog()
 
         If ib.sentOutput = True Then
@@ -127,7 +127,7 @@ Public Class frmMainUpdated
     Private Sub lblConnectLink_Click(sender As Object, e As EventArgs) Handles lblConnectLink.Click
 
         Dim ib As New InputBoxUpdated()
-        ib.setText("What would you like your link named (Ex. Linked In, Personal Website)")
+        ib.setText("What would you like your link name to be (Ex. Linked In, Personal Website)")
         ib.ShowDialog()
 
         If ib.sentOutput = True Then
@@ -139,7 +139,7 @@ Public Class frmMainUpdated
     Private Sub btnFileUpload_Click(sender As Object, e As EventArgs) Handles btnFileUpload.Click
 
         Dim ib As New InputBoxUpdated()
-        ib.setText("What would you like your file named (Ex. Resume, Buisiness Card)")
+        ib.setText("What would you like your file name to be (Ex. Resume, Business Card)")
         ib.ShowDialog()
 
         If ib.sentOutput = True Then
