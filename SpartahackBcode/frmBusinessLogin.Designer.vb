@@ -184,7 +184,7 @@ Partial Class frmBusinessLogin
         Me.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPass.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.Black
-        Me.txtPass.isPassword = False
+        Me.txtPass.isPassword = True
         Me.txtPass.Location = New System.Drawing.Point(53, 254)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.txtPass.Name = "txtPass"

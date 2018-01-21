@@ -30,4 +30,22 @@
         Me.Close()
         frmBusinessLogin.Show()
     End Sub
+
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+        If (txtPass.Text = txtRetryPass.Text) Then
+            Dim sqlCon As New sqlManager
+
+            Try
+                sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBCODE.Text, 1))
+
+                Dim form As New frmBusinessLogin
+                form.Show()
+                Me.Hide()
+            Catch ex As Exception
+                MsgBox("Registration Failed")
+            End Try
+
+
+        End If
+    End Sub
 End Class
