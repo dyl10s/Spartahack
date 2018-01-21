@@ -6,6 +6,8 @@ Public Class frmMainUpdated
     Public cons As New List(Of connections)
     Public connect As connections
     Public user As clsUser
+    Public controlCount As Integer = 0
+    Public barOpen As Boolean = False
 
     Private Sub frmMainUpdated_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.CenterToScreen()
@@ -45,7 +47,15 @@ Public Class frmMainUpdated
 
         For Each c As connections In Me.cons
             c.setText()
+            controlCount += 1
         Next
+
+        Select Case controlCount
+            Case <= 6
+                Me.Height = 200
+            Case <= 12
+                Me.Height = 320
+        End Select
 
 
     End Sub
@@ -63,8 +73,15 @@ Public Class frmMainUpdated
 
         Dim m As New MessageBox("Upload Complete")
 
+
         pFile.Visible = False
         pLink.Visible = False
+
+        If barOpen = True Then
+            barOpen = False
+            Me.Width -= 120
+        End If
+
         Me.cons.Add(connect)
         FlowLayoutPanel1.Controls.Add(connect)
         sqlCon.close()
@@ -101,12 +118,14 @@ Public Class frmMainUpdated
 
         If type = "link" Then
             txtInfoLink.Text = ""
+            barOpen = True
             pLink.Show()
             pFile.Hide()
         End If
 
         If type = "file" Then
             txtInfoLink.Text = ""
+            barOpen = True
             pFile.Show()
             pLink.Hide()
         End If

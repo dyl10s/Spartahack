@@ -32,6 +32,9 @@ Partial Class frmMainUpdated
         Me.txtInfoLink = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.lblLink = New System.Windows.Forms.Label()
         Me.bunGradPan = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.lblAddGroup = New System.Windows.Forms.Label()
+        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.drpGroups = New Bunifu.Framework.UI.BunifuDropdown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
@@ -49,12 +52,10 @@ Partial Class frmMainUpdated
         Me.lblFile = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.drpGroups = New Bunifu.Framework.UI.BunifuDropdown()
-        Me.lblAddGroup = New System.Windows.Forms.Label()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.pLink.SuspendLayout()
         CType(Me.btnDeleteLink, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bunGradPan.SuspendLayout()
+        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLink, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +63,6 @@ Partial Class frmMainUpdated
         CType(Me.btnSignOut, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pFile.SuspendLayout()
         CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -85,7 +85,7 @@ Partial Class frmMainUpdated
         Me.pLink.GradientBottomRight = System.Drawing.Color.White
         Me.pLink.GradientTopLeft = System.Drawing.Color.White
         Me.pLink.GradientTopRight = System.Drawing.Color.White
-        Me.pLink.Location = New System.Drawing.Point(0, 517)
+        Me.pLink.Location = New System.Drawing.Point(0, 343)
         Me.pLink.Name = "pLink"
         Me.pLink.Quality = 10
         Me.pLink.Size = New System.Drawing.Size(985, 72)
@@ -234,6 +234,47 @@ Partial Class frmMainUpdated
         Me.bunGradPan.Size = New System.Drawing.Size(985, 50)
         Me.bunGradPan.TabIndex = 0
         '
+        'lblAddGroup
+        '
+        Me.lblAddGroup.AutoSize = True
+        Me.lblAddGroup.BackColor = System.Drawing.Color.Transparent
+        Me.lblAddGroup.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblAddGroup.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAddGroup.Location = New System.Drawing.Point(556, 13)
+        Me.lblAddGroup.Name = "lblAddGroup"
+        Me.lblAddGroup.Size = New System.Drawing.Size(117, 21)
+        Me.lblAddGroup.TabIndex = 27
+        Me.lblAddGroup.Text = "Add Group"
+        '
+        'BunifuImageButton1
+        '
+        Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
+        Me.BunifuImageButton1.ImageActive = Nothing
+        Me.BunifuImageButton1.Location = New System.Drawing.Point(520, 10)
+        Me.BunifuImageButton1.Name = "BunifuImageButton1"
+        Me.BunifuImageButton1.Size = New System.Drawing.Size(30, 30)
+        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BunifuImageButton1.TabIndex = 26
+        Me.BunifuImageButton1.TabStop = False
+        Me.BunifuImageButton1.Zoom = 0
+        '
+        'drpGroups
+        '
+        Me.drpGroups.BackColor = System.Drawing.Color.Transparent
+        Me.drpGroups.BorderRadius = 7
+        Me.drpGroups.DisabledColor = System.Drawing.Color.Gray
+        Me.drpGroups.ForeColor = System.Drawing.Color.White
+        Me.drpGroups.Items = New String(-1) {}
+        Me.drpGroups.Location = New System.Drawing.Point(689, 8)
+        Me.drpGroups.Name = "drpGroups"
+        Me.drpGroups.NomalColor = System.Drawing.Color.Silver
+        Me.drpGroups.onHoverColor = System.Drawing.Color.Silver
+        Me.drpGroups.selectedIndex = -1
+        Me.drpGroups.Size = New System.Drawing.Size(202, 35)
+        Me.drpGroups.TabIndex = 0
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -356,7 +397,7 @@ Partial Class frmMainUpdated
         Me.pFile.GradientBottomRight = System.Drawing.Color.White
         Me.pFile.GradientTopLeft = System.Drawing.Color.White
         Me.pFile.GradientTopRight = System.Drawing.Color.White
-        Me.pFile.Location = New System.Drawing.Point(0, 445)
+        Me.pFile.Location = New System.Drawing.Point(0, 271)
         Me.pFile.Name = "pFile"
         Me.pFile.Quality = 10
         Me.pFile.Size = New System.Drawing.Size(985, 72)
@@ -522,56 +563,15 @@ Partial Class frmMainUpdated
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 50)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(30)
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(985, 395)
+        Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(20)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(985, 221)
         Me.FlowLayoutPanel1.TabIndex = 3
-        '
-        'drpGroups
-        '
-        Me.drpGroups.BackColor = System.Drawing.Color.Transparent
-        Me.drpGroups.BorderRadius = 7
-        Me.drpGroups.DisabledColor = System.Drawing.Color.Gray
-        Me.drpGroups.ForeColor = System.Drawing.Color.White
-        Me.drpGroups.Items = New String(-1) {}
-        Me.drpGroups.Location = New System.Drawing.Point(689, 8)
-        Me.drpGroups.Name = "drpGroups"
-        Me.drpGroups.NomalColor = System.Drawing.Color.Silver
-        Me.drpGroups.onHoverColor = System.Drawing.Color.Silver
-        Me.drpGroups.selectedIndex = -1
-        Me.drpGroups.Size = New System.Drawing.Size(202, 35)
-        Me.drpGroups.TabIndex = 0
-        '
-        'lblAddGroup
-        '
-        Me.lblAddGroup.AutoSize = True
-        Me.lblAddGroup.BackColor = System.Drawing.Color.Transparent
-        Me.lblAddGroup.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblAddGroup.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAddGroup.Location = New System.Drawing.Point(556, 13)
-        Me.lblAddGroup.Name = "lblAddGroup"
-        Me.lblAddGroup.Size = New System.Drawing.Size(117, 21)
-        Me.lblAddGroup.TabIndex = 27
-        Me.lblAddGroup.Text = "Add Group"
-        '
-        'BunifuImageButton1
-        '
-        Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
-        Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(520, 10)
-        Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(30, 30)
-        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton1.TabIndex = 26
-        Me.BunifuImageButton1.TabStop = False
-        Me.BunifuImageButton1.Zoom = 0
         '
         'frmMainUpdated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 589)
+        Me.ClientSize = New System.Drawing.Size(985, 415)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.pFile)
         Me.Controls.Add(Me.pLink)
@@ -584,6 +584,7 @@ Partial Class frmMainUpdated
         CType(Me.btnDeleteLink, System.ComponentModel.ISupportInitialize).EndInit()
         Me.bunGradPan.ResumeLayout(False)
         Me.bunGradPan.PerformLayout()
+        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLink, System.ComponentModel.ISupportInitialize).EndInit()
@@ -592,7 +593,6 @@ Partial Class frmMainUpdated
         Me.pFile.ResumeLayout(False)
         Me.pFile.PerformLayout()
         CType(Me.BunifuImageButton2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -26,8 +26,9 @@ Partial Class frmDownloadDialog
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDownloadDialog))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.pnlTop = New System.Windows.Forms.Panel()
-        Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.btnBack = New Bunifu.Framework.UI.BunifuImageButton()
         Me.lblAddContact = New System.Windows.Forms.Label()
+        Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.lblFullName = New System.Windows.Forms.Label()
         Me.pnlDLButt = New System.Windows.Forms.Panel()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -35,11 +36,10 @@ Partial Class frmDownloadDialog
         Me.btnSave = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.btnBack = New Bunifu.Framework.UI.BunifuImageButton()
         Me.pnlTop.SuspendLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDLButt.SuspendLayout()
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuElipse1
@@ -60,6 +60,31 @@ Partial Class frmDownloadDialog
         Me.pnlTop.Size = New System.Drawing.Size(427, 48)
         Me.pnlTop.TabIndex = 1
         '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.Transparent
+        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
+        Me.btnBack.ImageActive = Nothing
+        Me.btnBack.Location = New System.Drawing.Point(6, 6)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(30, 31)
+        Me.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnBack.TabIndex = 41
+        Me.btnBack.TabStop = False
+        Me.btnBack.Zoom = 10
+        '
+        'lblAddContact
+        '
+        Me.lblAddContact.AutoSize = True
+        Me.lblAddContact.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAddContact.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lblAddContact.Location = New System.Drawing.Point(162, 31)
+        Me.lblAddContact.Name = "lblAddContact"
+        Me.lblAddContact.Size = New System.Drawing.Size(77, 13)
+        Me.lblAddContact.TabIndex = 1
+        Me.lblAddContact.Text = "Add Contact"
+        '
         'btnExit
         '
         Me.btnExit.BackColor = System.Drawing.Color.Transparent
@@ -74,21 +99,11 @@ Partial Class frmDownloadDialog
         Me.btnExit.TabStop = False
         Me.btnExit.Zoom = 10
         '
-        'lblAddContact
-        '
-        Me.lblAddContact.AutoSize = True
-        Me.lblAddContact.Font = New System.Drawing.Font("Cooper Black", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAddContact.Location = New System.Drawing.Point(162, 31)
-        Me.lblAddContact.Name = "lblAddContact"
-        Me.lblAddContact.Size = New System.Drawing.Size(77, 13)
-        Me.lblAddContact.TabIndex = 1
-        Me.lblAddContact.Text = "Add Contact"
-        '
         'lblFullName
         '
         Me.lblFullName.AutoSize = True
         Me.lblFullName.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFullName.Location = New System.Drawing.Point(75, 5)
+        Me.lblFullName.Location = New System.Drawing.Point(81, 6)
         Me.lblFullName.Name = "lblFullName"
         Me.lblFullName.Size = New System.Drawing.Size(253, 21)
         Me.lblFullName.TabIndex = 0
@@ -228,20 +243,6 @@ Partial Class frmDownloadDialog
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(427, 375)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.Color.Transparent
-        Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
-        Me.btnBack.ImageActive = Nothing
-        Me.btnBack.Location = New System.Drawing.Point(6, 6)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(30, 31)
-        Me.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnBack.TabIndex = 41
-        Me.btnBack.TabStop = False
-        Me.btnBack.Zoom = 10
-        '
         'frmDownloadDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -255,9 +256,9 @@ Partial Class frmDownloadDialog
         Me.Text = "frmDownloadDialog"
         Me.pnlTop.ResumeLayout(False)
         Me.pnlTop.PerformLayout()
+        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlDLButt.ResumeLayout(False)
-        CType(Me.btnBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
