@@ -121,6 +121,12 @@
     <Compile Include="frmConnections.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmDownloadDialog.Designer.vb">
+      <DependentUpon>frmDownloadDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDownloadDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConnections.resx">
       <DependentUpon>frmConnections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDownloadDialog.resx">
+      <DependentUpon>frmDownloadDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
