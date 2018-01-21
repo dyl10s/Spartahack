@@ -63,7 +63,7 @@ Public Class frmLoginUpdated
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
         txtEmail.Text = "achlebek17@gmail.com"
         txtPassword.Text = "adam4"
     End Sub

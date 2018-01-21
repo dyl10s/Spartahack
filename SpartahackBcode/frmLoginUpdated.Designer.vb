@@ -29,7 +29,6 @@ Partial Class frmLoginUpdated
         Me.txtPassword = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.lblBusiness = New System.Windows.Forms.Label()
         Me.pbLoader = New System.Windows.Forms.PictureBox()
         Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
@@ -156,15 +155,6 @@ Partial Class frmLoginUpdated
         Me.btnRegister.Textcolor = System.Drawing.Color.Black
         Me.btnRegister.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(338, 447)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(47, 48)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'lblBusiness
         '
         Me.lblBusiness.AutoSize = True
@@ -258,7 +248,6 @@ Partial Class frmLoginUpdated
         Me.Controls.Add(Me.lblPass)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.lblBusiness)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.pbLoader)
         Me.Controls.Add(Me.btnMin)
         Me.Controls.Add(Me.btnExit)
@@ -287,7 +276,6 @@ Partial Class frmLoginUpdated
     Friend WithEvents btnMin As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents pbLoader As PictureBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents pbLogo As PictureBox
     Friend WithEvents lblBusiness As Label
     Friend WithEvents lblEmail As Label

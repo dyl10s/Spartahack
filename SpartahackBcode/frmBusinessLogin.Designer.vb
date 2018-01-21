@@ -26,7 +26,6 @@ Partial Class frmBusinessLogin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBusinessLogin))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.lblBusiness = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtEmail = New Bunifu.Framework.UI.BunifuMetroTextbox()
@@ -62,15 +61,6 @@ Partial Class frmBusinessLogin
         Me.lblBusiness.Size = New System.Drawing.Size(121, 15)
         Me.lblBusiness.TabIndex = 6
         Me.lblBusiness.Text = "Consumer Client"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(340, 445)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(47, 48)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'btnRegister
         '
@@ -315,7 +305,6 @@ Partial Class frmBusinessLogin
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.lblBus)
         Me.Controls.Add(Me.lblBusiness)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.pbLoader)
         Me.Controls.Add(Me.btnMin)
         Me.Controls.Add(Me.btnExit)
@@ -337,7 +326,6 @@ Partial Class frmBusinessLogin
 
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents lblBusiness As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents pbLoader As PictureBox
     Friend WithEvents btnMin As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
