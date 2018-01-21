@@ -45,19 +45,24 @@ Public Class frmBusinessLogin
 
             Dim sqlCon As New sqlManager
 
-            Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPass.Text + "' and company = 1", 4)
+            Try
+                Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPass.Text + "' and company = 1", 4)
 
-            Dim fName As String = rawData.Split("~")(0)
-            Dim lName As String = rawData.Split("~")(1)
-            Dim email As String = rawData.Split("~")(2)
-            Dim bCode As String = rawData.Split("~")(3)
+                Dim fName As String = rawData.Split("~")(0)
+                Dim lName As String = rawData.Split("~")(1)
+                Dim email As String = rawData.Split("~")(2)
+                Dim bCode As String = rawData.Split("~")(3)
 
-            Dim clsUser As New clsUser(fName, lName, email, bCode)
-            Dim frmMain As New frmBusinessBcode
+                Dim clsUser As New clsUser(fName, lName, email, bCode)
+                Dim frmMain As New frmBusinessBcode
 
-            frmMain.user = clsUser
-            frmMain.Show()
-            Me.Hide()
+                frmMain.user = clsUser
+                frmMain.Show()
+                Me.Hide()
+            Catch ex As Exception
+                MsgBox("Email or password is incorrect.")
+                pbLoader.Visible = False
+            End Try
 
             sqlCon.close()
         Else

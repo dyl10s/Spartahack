@@ -48,6 +48,8 @@ Public Class frmRegisterUpdated
                     Catch ex As Exception
                         MsgBox("Registration Failed")
                     End Try
+                Else
+                    MsgBox("Passwords do not match.")
                 End If
             Else
                 MsgBox("Please enter a valid email.")

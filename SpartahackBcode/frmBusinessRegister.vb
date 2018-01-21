@@ -1,4 +1,6 @@
-﻿Public Class frmBusinessRegister
+﻿Imports System.Text.RegularExpressions
+
+Public Class frmBusinessRegister
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
@@ -20,7 +22,7 @@
         txtLastName.Left = (Me.ClientSize.Width / 2) + 10
 
         lblBCODE.Left = (Me.ClientSize.Width / 2) - (lblBCODE.Width / 2)
-        txtBCODE.Left = (Me.ClientSize.Width / 2) - (txtBCODE.Width / 2)
+        txtBussinessName.Left = (Me.ClientSize.Width / 2) - (txtBussinessName.Width / 2)
 
         btnRegister.Left = (Me.ClientSize.Width / 2) - (btnRegister.Width / 2)
         lblBCODE.Left = (Me.ClientSize.Width / 2) - (lblBCODE.Width / 2)
@@ -32,20 +34,34 @@
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        If (txtPass.Text = txtRetryPass.Text) Then
-            Dim sqlCon As New sqlManager
+        If (txtBussinessName.Text = Nothing Or txtEmail.Text = Nothing Or txtFirstName.Text = Nothing Or txtLastName.Text = Nothing Or txtPass.Text = Nothing Or txtRetryPass.Text = Nothing) Then
+            MsgBox("Please fill out all fields.")
+        Else
+            If (IsEmail(txtEmail.Text) = True) Then
+                If (txtPass.Text = txtRetryPass.Text) Then
+                    Dim sqlCon As New sqlManager
 
-            Try
-                sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBCODE.Text, 1))
+                    Try
+                        sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBussinessName.Text, 1))
 
-                Dim form As New frmBusinessLogin
-                form.Show()
-                Me.Hide()
-            Catch ex As Exception
-                MsgBox("Registration Failed")
-            End Try
-
-
+                        Dim form As New frmBusinessLogin
+                        form.Show()
+                        Me.Hide()
+                    Catch ex As Exception
+                        MsgBox("Registration Failed")
+                    End Try
+                Else
+                    MsgBox("Passwords do not match.")
+                End If
+            Else
+                MsgBox("Please enter a valid email.")
+            End If
         End If
     End Sub
+
+    Function IsEmail(ByVal email As String) As Boolean
+        Static emailExpression As New Regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+
+        Return emailExpression.IsMatch(email)
+    End Function
 End Class
