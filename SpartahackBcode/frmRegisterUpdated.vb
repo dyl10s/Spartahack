@@ -35,7 +35,7 @@ Public Class frmRegisterUpdated
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         If (txtBCODE.Text = Nothing Or txtEmail.Text = Nothing Or txtFirstName.Text = Nothing Or txtLastName.Text = Nothing Or txtPass.Text = Nothing Or txtRetryPass.Text = Nothing) Then
-            MsgBox("Please fill out all fields.")
+            Dim m As New MessageBox("Please fill out all fields.")
         Else
             If (IsEmail(txtEmail.Text) = True) Then
                 If (txtPass.Text = txtRetryPass.Text) Then
@@ -46,13 +46,13 @@ Public Class frmRegisterUpdated
                         form.Show()
                         Me.Hide()
                     Catch ex As Exception
-                        MsgBox("Registration Failed")
+                        Dim m As New MessageBox("Registration Failed")
                     End Try
                 Else
-                    MsgBox("Passwords do not match.")
+                    Dim m As New MessageBox("Passwords do not match.")
                 End If
             Else
-                MsgBox("Please enter a valid email.")
+                Dim m As New MessageBox("Please enter a valid email.")
             End If
         End If
     End Sub

@@ -37,7 +37,7 @@ Public Class frmLoginUpdated
                 Me.Hide()
 
             Catch ex As Exception
-                MsgBox("Email or password is incorrect.")
+                Dim m As New MessageBox("Email or password is incorrect.")
                 pbLoader.Visible = False
             End Try
 
@@ -45,7 +45,7 @@ Public Class frmLoginUpdated
 
             sqlCon.close()
         Else
-            MsgBox("Please enter a valid email.")
+            Dim m As New MessageBox("Please enter a valid email.")
         End If
     End Sub
 

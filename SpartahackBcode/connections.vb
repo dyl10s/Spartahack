@@ -16,9 +16,17 @@
         mainForm = frm
     End Sub
 
-    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
+    Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click, lblType.Click
 
         mainForm.connect = Me
+
+        For Each con As connections In mainForm.cons
+            con.lblTitle.BackColor = Color.Navy
+            con.lblType.BackColor = Color.Navy
+        Next
+
+        Me.lblTitle.BackColor = Color.Blue
+        Me.lblType.BackColor = Color.Blue
 
         If type = "file" Then
 

@@ -19,6 +19,7 @@
         ' This call is required by the designer.
         InitializeComponent()
         setText(message)
+        Me.ShowDialog()
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub

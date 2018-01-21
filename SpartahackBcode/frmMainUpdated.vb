@@ -3,7 +3,7 @@ Imports System.Net
 
 Public Class frmMainUpdated
 
-    Dim cons As New List(Of connections)
+    Public cons As New List(Of connections)
     Public connect As connections
     Public user As clsUser
 
@@ -61,7 +61,8 @@ Public Class frmMainUpdated
         sqlCon.sendData("Delete from connections where id = " + connect.id.ToString)
         sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + txtInfoLink.Text + "', '" + user.bCode + "' , '" + connect.lblTitle.Text + "')")
 
-        MsgBox("Upload Complete")
+        Dim m As New MessageBox("Upload Complete")
+
         pFile.Visible = False
         pLink.Visible = False
         Me.cons.Add(connect)
@@ -191,7 +192,7 @@ Public Class frmMainUpdated
         sqlCon.sendData("delete from connections where id =" + connect.id.ToString)
         sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + ftpLocation + "', '" + user.bCode + "' , '" + connect.lblTitle.Text + "')")
 
-        MsgBox("Upload Complete")
+        Dim m As New MessageBox("Upload Complete")
         pFile.Visible = False
         pLink.Visible = False
         Me.cons.Add(connect)
@@ -203,6 +204,11 @@ Public Class frmMainUpdated
     End Sub
 
     Private Sub FlowLayoutPanel1_Click(sender As Object, e As EventArgs) Handles FlowLayoutPanel1.Click
+
+        For Each con As connections In cons
+            con.lblTitle.BackColor = Color.Navy
+            con.lblType.BackColor = Color.Navy
+        Next
 
         pLink.Hide()
         pFile.Hide()
@@ -312,4 +318,7 @@ Public Class frmMainUpdated
         Process.Start(webAddress)
     End Sub
 
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+
+    End Sub
 End Class
