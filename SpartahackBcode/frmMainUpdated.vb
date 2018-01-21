@@ -269,7 +269,7 @@ Public Class frmMainUpdated
 
     End Sub
 
-    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles btnOpenLink.Click
+    Private Sub BunifuFlatButton2(sender As Object, e As EventArgs) Handles btnOpenLink.Click
 
         If connect IsNot Nothing Then
 
@@ -300,4 +300,11 @@ Public Class frmMainUpdated
         End If
 
     End Sub
+
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs)
+        Dim webAddress As String = txtInfoLink.Text
+
+        Process.Start(webAddress)
+    End Sub
+
 End Class

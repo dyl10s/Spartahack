@@ -28,15 +28,11 @@
 
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Application.Exit()
-    End Sub
-
-    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
-        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
-    End Sub
-
     Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
 End Class

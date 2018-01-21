@@ -118,30 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAABB5JREFUeF7tnTuOE0EURScgJGEBMxGfnIVMSIbYDltgDSACxB4gJyIgAAEZIRES
-        8K40lpB1Gbtd9apftc+RjoTG7kaqe2W3y/bzBQAAAAAAAAAAAAAU5iq8vlH/hjPhMnwb/tlTf9NtsGEe
-        hN/C/fB36jZKsFEOhb9TjwSwMY4NfyfXBBtiafhSF4bQgXvh8/BT+Dv8Eb4MH4cjOCV8SQE6cD/8HLoF
-        /hU+CzM5NXzJU0Ajd8IPoVvcnSpB1iNBS/hcBHbgSegWd189HfSmJXwdx8vADrwI3QLvq2uCnrSE/zXU
-        8dCBV6FbZGcvHoaEX4TRBSD8YowsAOEXZFQBCL8oIwpA+IXJLgDhFyezAIQ/AVkFIPxJyChAS/g6jvAH
-        0rsACv976I4/JOGvQM8CEP6E9CoA4U9KjwIQ/sS0FoDwJ6elAIS/AU4tAOFvhFMKQPgbYmkBCH9jLClA
-        a/g6HoqxpACEv0GWFOAUCb84mQUg/AnIKgDhT0JGAQh/InoXgPAno2cBCH9CehVALxEJf0KyLgJbHT2f
-        4GypWoCdI+YTnDWvQ7fwlcycT3D2vA/dolczYz4BBJoJ5Ba8mr3nE8ANX0K34NXU4CpI4F3oFryaeqSC
-        BJ6GbsGrqRF2kMTH0C16FTXCTnMMIYm7YdUSaISd5hjCAPR0oGsCXRjqOVcvEbVPoM2i0Wp6mUbYaY4h
-        AAAAAAAAAAAAwApoe1LblNqudNuY2Wp7Vtu02q7Vtq22b7WNCwPQGxOHfmNnLfWGjt7YgST0luT/fl2r
-        iioBJKEPJbhFryZPB0nM8gFKXRNAAvpgolvwav4MIQF9NNkteEUhAX05wS12RSEBfT1JX1NyC17JNyEk
-        oS8qVi+BNosgET0S6Omg6jUBBZiQR+Gpc/j2pQCTockavcKXFGAieocvKcAkZIQvKcAEZIUvKUBxMsOX
-        FKAw2eFLClCUlvA1hNH93UkBCtIavo53tzkpQDF6hC/c7U4KUAiFt+Th+1/3Z++6+zgpQBF6hi/c/ZwU
-        oAC9wxfuvk4KsDIZ4Qt3fycFWJGs8IU7xkkBViIzfOGOc1KAFcgOX7hjnRRgMK3hH/tzqu54JwUYiMIb
-        Eb5w53BSgEGMDF+48zgpwABGhy/cuZwUIJk1whfufE4KkMha4Qt3TicFSGLN8IU7r5MCJLB2+MKd20kB
-        OlMhfOHO76QAHWkJ/2vYK3zh/g8nBehEpfDFsd9F1PQyaOQyrBS+OHY+gUbYQSNvQ7e4h8wKXxwzn0Aj
-        7PiZlUauQre4h8wMf8dt8wk0wo4fWOrAdegW+DZHhL/j3/kEGlyl6WUaYcdPq3ViaQFGhg8DWPIUQPgb
-        5ZiLQMLfMIdeBvbc4YOiqATukUB/021wJuiaQBeGUv8GAAAAAAAAAAAAgIJcXPwF72Lfdlx74JoAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
   <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
