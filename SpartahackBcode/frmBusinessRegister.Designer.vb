@@ -137,7 +137,7 @@ Partial Class frmBusinessRegister
         Me.txtLastName.Font = New System.Drawing.Font("Cooper Black", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLastName.ForeColor = System.Drawing.Color.Black
         Me.txtLastName.isPassword = False
-        Me.txtLastName.Location = New System.Drawing.Point(252, 221)
+        Me.txtLastName.Location = New System.Drawing.Point(274, 221)
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(235, 30)
@@ -165,7 +165,7 @@ Partial Class frmBusinessRegister
         Me.txtFirstName.Font = New System.Drawing.Font("Cooper Black", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFirstName.ForeColor = System.Drawing.Color.Black
         Me.txtFirstName.isPassword = False
-        Me.txtFirstName.Location = New System.Drawing.Point(3, 221)
+        Me.txtFirstName.Location = New System.Drawing.Point(25, 221)
         Me.txtFirstName.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(235, 30)
@@ -193,7 +193,7 @@ Partial Class frmBusinessRegister
         Me.txtRetryPass.Font = New System.Drawing.Font("Cooper Black", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRetryPass.ForeColor = System.Drawing.Color.Black
         Me.txtRetryPass.isPassword = True
-        Me.txtRetryPass.Location = New System.Drawing.Point(252, 156)
+        Me.txtRetryPass.Location = New System.Drawing.Point(274, 156)
         Me.txtRetryPass.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtRetryPass.Name = "txtRetryPass"
         Me.txtRetryPass.Size = New System.Drawing.Size(235, 30)
@@ -221,7 +221,7 @@ Partial Class frmBusinessRegister
         Me.txtPass.Font = New System.Drawing.Font("Cooper Black", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.Black
         Me.txtPass.isPassword = True
-        Me.txtPass.Location = New System.Drawing.Point(3, 156)
+        Me.txtPass.Location = New System.Drawing.Point(25, 156)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(235, 30)

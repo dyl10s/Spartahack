@@ -37,8 +37,6 @@ Partial Class frmBusinessLogin
         Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.lblPass = New System.Windows.Forms.Label()
         CType(Me.pbLoader, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +55,7 @@ Partial Class frmBusinessLogin
         Me.lblBusiness.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblBusiness.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBusiness.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblBusiness.Location = New System.Drawing.Point(130, 483)
+        Me.lblBusiness.Location = New System.Drawing.Point(130, 478)
         Me.lblBusiness.Name = "lblBusiness"
         Me.lblBusiness.Size = New System.Drawing.Size(121, 15)
         Me.lblBusiness.TabIndex = 33
@@ -95,7 +93,7 @@ Partial Class frmBusinessLogin
         Me.btnRegister.IconVisible = True
         Me.btnRegister.IconZoom = 90.0R
         Me.btnRegister.IsTab = False
-        Me.btnRegister.Location = New System.Drawing.Point(201, 361)
+        Me.btnRegister.Location = New System.Drawing.Point(201, 356)
         Me.btnRegister.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Normalcolor = System.Drawing.SystemColors.HotTrack
@@ -132,7 +130,7 @@ Partial Class frmBusinessLogin
         Me.btnLogin.IconVisible = True
         Me.btnLogin.IconZoom = 90.0R
         Me.btnLogin.IsTab = False
-        Me.btnLogin.Location = New System.Drawing.Point(75, 361)
+        Me.btnLogin.Location = New System.Drawing.Point(75, 356)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Normalcolor = System.Drawing.SystemColors.HotTrack
@@ -162,7 +160,7 @@ Partial Class frmBusinessLogin
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(293, 54)
         Me.txtEmail.TabIndex = 24
-        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'lblBus
         '
@@ -170,7 +168,7 @@ Partial Class frmBusinessLogin
         Me.lblBus.BackColor = System.Drawing.Color.Transparent
         Me.lblBus.Font = New System.Drawing.Font("Cooper Black", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBus.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblBus.Location = New System.Drawing.Point(127, 103)
+        Me.lblBus.Location = New System.Drawing.Point(127, 130)
         Me.lblBus.Name = "lblBus"
         Me.lblBus.Size = New System.Drawing.Size(132, 31)
         Me.lblBus.TabIndex = 34
@@ -186,13 +184,13 @@ Partial Class frmBusinessLogin
         Me.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPass.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.Black
-        Me.txtPass.isPassword = False
-        Me.txtPass.Location = New System.Drawing.Point(53, 259)
+        Me.txtPass.isPassword = True
+        Me.txtPass.Location = New System.Drawing.Point(53, 254)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(293, 54)
         Me.txtPass.TabIndex = 35
-        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BunifuFlatButton1
         '
@@ -217,7 +215,7 @@ Partial Class frmBusinessLogin
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(75, 415)
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(75, 410)
         Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.HotTrack
@@ -234,7 +232,7 @@ Partial Class frmBusinessLogin
         'pbLoader
         '
         Me.pbLoader.Image = CType(resources.GetObject("pbLoader.Image"), System.Drawing.Image)
-        Me.pbLoader.Location = New System.Drawing.Point(142, 321)
+        Me.pbLoader.Location = New System.Drawing.Point(142, 316)
         Me.pbLoader.Name = "pbLoader"
         Me.pbLoader.Size = New System.Drawing.Size(100, 34)
         Me.pbLoader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -273,34 +271,12 @@ Partial Class frmBusinessLogin
         'pbLogo
         '
         Me.pbLogo.Image = CType(resources.GetObject("pbLogo.Image"), System.Drawing.Image)
-        Me.pbLogo.Location = New System.Drawing.Point(-46, -15)
+        Me.pbLogo.Location = New System.Drawing.Point(-46, 12)
         Me.pbLogo.Name = "pbLogo"
         Me.pbLogo.Size = New System.Drawing.Size(489, 193)
         Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pbLogo.TabIndex = 32
         Me.pbLogo.TabStop = False
-        '
-        'lblEmail
-        '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Font = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.ForeColor = System.Drawing.Color.Black
-        Me.lblEmail.Location = New System.Drawing.Point(168, 157)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(56, 19)
-        Me.lblEmail.TabIndex = 37
-        Me.lblEmail.Text = "Email"
-        '
-        'lblPass
-        '
-        Me.lblPass.AutoSize = True
-        Me.lblPass.Font = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPass.ForeColor = System.Drawing.Color.Black
-        Me.lblPass.Location = New System.Drawing.Point(152, 240)
-        Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(90, 19)
-        Me.lblPass.TabIndex = 38
-        Me.lblPass.Text = "Password"
         '
         'frmBusinessLogin
         '
@@ -308,8 +284,6 @@ Partial Class frmBusinessLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(397, 522)
-        Me.Controls.Add(Me.lblPass)
-        Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.lblBus)
@@ -347,6 +321,4 @@ Partial Class frmBusinessLogin
     Friend WithEvents lblBus As Label
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents lblPass As Label
-    Friend WithEvents lblEmail As Label
 End Class

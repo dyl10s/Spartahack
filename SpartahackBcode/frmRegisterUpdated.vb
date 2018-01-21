@@ -36,7 +36,7 @@
             Dim sqlCon As New sqlManager
 
             Try
-                sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBCODE.Text))
+                sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBCODE.Text, 0))
 
                 Dim form As New frmLoginUpdated
                 form.Show()
