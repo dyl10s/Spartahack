@@ -14,6 +14,15 @@
         bunGradPan.GradientBottomRight = ColorTranslator.FromHtml("#43C6AC")
     End Sub
 
+    Public Sub New(message As String)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        setText(message)
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
     Public Sub setText(str As String)
         lblFile.Text = str
     End Sub
