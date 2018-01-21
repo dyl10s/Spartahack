@@ -43,6 +43,11 @@ Public Class frmMainUpdated
         Next
         sqlCon.close()
 
+        For Each c As connections In Me.cons
+            c.setText()
+        Next
+
+
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
