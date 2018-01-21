@@ -23,31 +23,15 @@ Partial Class InputBoxUpdated
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InputBoxUpdated))
-        Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
         Me.bunGradPan = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.lblFile = New System.Windows.Forms.Label()
         Me.txtFileLink = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
-        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bunGradPan.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnMin
-        '
-        Me.btnMin.BackColor = System.Drawing.Color.Transparent
-        Me.btnMin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMin.Image = CType(resources.GetObject("btnMin.Image"), System.Drawing.Image)
-        Me.btnMin.ImageActive = Nothing
-        Me.btnMin.Location = New System.Drawing.Point(379, 12)
-        Me.btnMin.Name = "btnMin"
-        Me.btnMin.Size = New System.Drawing.Size(30, 30)
-        Me.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnMin.TabIndex = 26
-        Me.btnMin.TabStop = False
-        Me.btnMin.Zoom = 10
         '
         'btnExit
         '
@@ -68,7 +52,6 @@ Partial Class InputBoxUpdated
         Me.bunGradPan.BackColor = System.Drawing.Color.White
         Me.bunGradPan.BackgroundImage = CType(resources.GetObject("bunGradPan.BackgroundImage"), System.Drawing.Image)
         Me.bunGradPan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.bunGradPan.Controls.Add(Me.btnMin)
         Me.bunGradPan.Controls.Add(Me.btnExit)
         Me.bunGradPan.Dock = System.Windows.Forms.DockStyle.Top
         Me.bunGradPan.GradientBottomLeft = System.Drawing.Color.White
@@ -198,14 +181,11 @@ Partial Class InputBoxUpdated
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "InputBoxUpdated"
         Me.Text = "InputBox"
-        CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.bunGradPan.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents btnMin As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnExit As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents bunGradPan As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents lblFile As Label

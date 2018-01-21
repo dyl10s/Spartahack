@@ -1,4 +1,7 @@
 ﻿Public Class frmBusinessBcode
+
+    Public user As clsUser
+
     Private Sub frmBusinessBcode_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
 
