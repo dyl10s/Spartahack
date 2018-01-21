@@ -4,6 +4,7 @@
         Me.CenterToScreen()
 
         txtEmail.Left = (Me.ClientSize.Width / 2) - (txtEmail.Width / 2)
+        lblBusiness.Left = (Me.ClientSize.Width / 2) - (lblBusiness.Width / 2)
         txtPassword.Left = (Me.ClientSize.Width / 2) - (txtPassword.Width / 2)
         btnLogin.Left = (Me.ClientSize.Width / 2) - (btnLogin.Width / 2)
         btnRegister.Left = (Me.ClientSize.Width / 2) - (btnRegister.Width / 2)
@@ -51,5 +52,11 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         txtEmail.Text = "achlebek17@gmail.com"
         txtPassword.Text = "adam4"
+    End Sub
+
+    Private Sub lblBusiness_Click(sender As Object, e As EventArgs) Handles lblBusiness.Click
+        Dim frm As New frmBusinessLogin
+        frm.Show()
+        Me.Hide()
     End Sub
 End Class
