@@ -5,7 +5,10 @@
     Public path As String = ""
     Public id As Integer
 
+    Public typeInt As Integer = 0
+
     Public mainForm As frmMainUpdated
+    Public mainForm2 As frmDownloadDialog
 
     Public Sub New(ByRef frm As frmMainUpdated)
 
@@ -13,42 +16,65 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        mainForm = frm
+        If typeInt = 0 Then
+            mainForm = frm
+        End If
+
     End Sub
+
 
     Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click, lblType.Click
 
-        mainForm.connect = Me
+        If typeInt = 0 Then
 
-        For Each con As connections In mainForm.cons
-            con.lblTitle.BackColor = Color.Navy
-            con.lblType.BackColor = Color.Navy
-        Next
-
-        Me.lblTitle.BackColor = Color.Blue
-        Me.lblType.BackColor = Color.Blue
-
-        If type = "file" Then
-
-            mainForm.txtFileLink.Text = ""
-            mainForm.txtInfoLink.Text = ""
-            mainForm.pLink.Hide()
-            mainForm.pFile.Show()
-            mainForm.txtFileLink.Text = lblTitle.Text
             mainForm.connect = Me
+
+            For Each con As connections In mainForm.cons
+                con.lblTitle.BackColor = Color.Navy
+                con.lblType.BackColor = Color.Navy
+            Next
+
+            Me.lblTitle.BackColor = Color.Blue
+            Me.lblType.BackColor = Color.Blue
+
+            If type = "file" Then
+
+                mainForm.txtFileLink.Text = ""
+                mainForm.txtInfoLink.Text = ""
+                mainForm.pLink.Hide()
+                mainForm.pFile.Show()
+                mainForm.txtFileLink.Text = lblTitle.Text
+                mainForm.connect = Me
+
+            End If
+
+            If type = "link" Then
+
+                mainForm.txtFileLink.Text = ""
+                mainForm.txtInfoLink.Text = ""
+                mainForm.pFile.Hide()
+                mainForm.pLink.Show()
+                mainForm.connect = Me
+                mainForm.txtInfoLink.Text = textData
+
+            End If
 
         End If
 
-        If type = "link" Then
+        If typeInt = 1 Then
 
-            mainForm.txtFileLink.Text = ""
-            mainForm.txtInfoLink.Text = ""
-            mainForm.pFile.Hide()
-            mainForm.pLink.Show()
-            mainForm.connect = Me
-            mainForm.txtInfoLink.Text = textData
+            mainForm2.connect = Me
+
+            For Each con As connections In mainForm2.cons
+                con.lblTitle.BackColor = Color.Navy
+                con.lblType.BackColor = Color.Navy
+            Next
+
+            Me.lblTitle.BackColor = Color.Blue
+            Me.lblType.BackColor = Color.Blue
 
         End If
+
 
     End Sub
 

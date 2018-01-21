@@ -47,6 +47,8 @@ Public Class sqlManager
 
         End While
 
+        dataReader.Close()
+
         Return returnValue
 
     End Function

@@ -47,8 +47,21 @@ Public Class frmBusinessBcode
             End If
         Next
 
-        Dim frmDisplay As New frmBusinessDisplay(connections)
+        Dim userData() = sqlCon.getData("Select FirstName, LastName from users where bCode='" + txtCode.Text + "'", 2).Split("~")
+        Dim frmDisplay As New frmDownloadDialog()
+        frmDisplay.lblFullName.Text = userData(0) + " " + userData(1)
+
+        For Each c As connections In connections
+            c.typeInt = 1
+            c.mainForm2 = frmDisplay
+            frmDisplay.FlowLayoutPanel1.Controls.Add(c)
+            frmDisplay.cons.Add(c)
+        Next
+
+
+        sqlCon.close()
         frmDisplay.Show()
+        Me.Hide()
 
     End Sub
 End Class
