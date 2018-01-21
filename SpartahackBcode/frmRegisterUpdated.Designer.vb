@@ -290,7 +290,7 @@ Partial Class frmRegisterUpdated
         Me.btnBack.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
         Me.btnBack.ImageActive = Nothing
-        Me.btnBack.Location = New System.Drawing.Point(7, 6)
+        Me.btnBack.Location = New System.Drawing.Point(7, 5)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(30, 31)
         Me.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom

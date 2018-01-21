@@ -30,6 +30,7 @@ Partial Class frmLoginUpdated
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnRegister = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblBusiness = New System.Windows.Forms.Label()
         Me.pbLoader = New System.Windows.Forms.PictureBox()
         Me.btnMin = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
@@ -107,7 +108,7 @@ Partial Class frmLoginUpdated
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Normalcolor = System.Drawing.Color.White
         Me.btnLogin.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnLogin.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnLogin.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLogin.selected = False
         Me.btnLogin.Size = New System.Drawing.Size(241, 48)
         Me.btnLogin.TabIndex = 3
@@ -139,12 +140,12 @@ Partial Class frmLoginUpdated
         Me.btnRegister.IconVisible = True
         Me.btnRegister.IconZoom = 90.0R
         Me.btnRegister.IsTab = False
-        Me.btnRegister.Location = New System.Drawing.Point(73, 421)
+        Me.btnRegister.Location = New System.Drawing.Point(73, 413)
         Me.btnRegister.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Normalcolor = System.Drawing.Color.White
         Me.btnRegister.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnRegister.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnRegister.OnHoverTextColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnRegister.selected = False
         Me.btnRegister.Size = New System.Drawing.Size(241, 48)
         Me.btnRegister.TabIndex = 4
@@ -161,6 +162,19 @@ Partial Class frmLoginUpdated
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lblBusiness
+        '
+        Me.lblBusiness.AutoSize = True
+        Me.lblBusiness.BackColor = System.Drawing.Color.Transparent
+        Me.lblBusiness.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblBusiness.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBusiness.ForeColor = System.Drawing.Color.White
+        Me.lblBusiness.Location = New System.Drawing.Point(137, 478)
+        Me.lblBusiness.Name = "lblBusiness"
+        Me.lblBusiness.Size = New System.Drawing.Size(111, 15)
+        Me.lblBusiness.TabIndex = 23
+        Me.lblBusiness.Text = "Business Client"
         '
         'pbLoader
         '
@@ -216,7 +230,8 @@ Partial Class frmLoginUpdated
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ClientSize = New System.Drawing.Size(397, 507)
+        Me.ClientSize = New System.Drawing.Size(397, 522)
+        Me.Controls.Add(Me.lblBusiness)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.pbLoader)
         Me.Controls.Add(Me.btnMin)
@@ -234,6 +249,7 @@ Partial Class frmLoginUpdated
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -247,4 +263,5 @@ Partial Class frmLoginUpdated
     Friend WithEvents pbLoader As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents pbLogo As PictureBox
+    Friend WithEvents lblBusiness As Label
 End Class

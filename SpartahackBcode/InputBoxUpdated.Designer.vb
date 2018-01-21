@@ -136,7 +136,7 @@ Partial Class InputBoxUpdated
         Me.BunifuFlatButton1.Location = New System.Drawing.Point(50, 201)
         Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.Silver
+        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.Gray
         Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black
         Me.BunifuFlatButton1.selected = False
@@ -173,7 +173,7 @@ Partial Class InputBoxUpdated
         Me.BunifuFlatButton2.Location = New System.Drawing.Point(276, 201)
         Me.BunifuFlatButton2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
-        Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.Silver
+        Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.Gray
         Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black
         Me.BunifuFlatButton2.selected = False

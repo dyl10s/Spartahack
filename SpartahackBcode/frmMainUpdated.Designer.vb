@@ -48,7 +48,11 @@ Partial Class frmMainUpdated
         Me.lblFile = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+<<<<<<< HEAD
         Me.btnOpenLink = New Bunifu.Framework.UI.BunifuFlatButton()
+=======
+        Me.btnOpenInBroswer = New Bunifu.Framework.UI.BunifuFlatButton()
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         Me.pLink.SuspendLayout()
         CType(Me.btnDeleteLink, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bunGradPan.SuspendLayout()
@@ -71,8 +75,13 @@ Partial Class frmMainUpdated
         Me.pLink.BackColor = System.Drawing.Color.Silver
         Me.pLink.BackgroundImage = CType(resources.GetObject("pLink.BackgroundImage"), System.Drawing.Image)
         Me.pLink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
         Me.pLink.Controls.Add(Me.btnOpenLink)
         Me.pLink.Controls.Add(Me.btnDeleteLink)
+=======
+        Me.pLink.Controls.Add(Me.btnOpenInBroswer)
+        Me.pLink.Controls.Add(Me.BunifuImageButton1)
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         Me.pLink.Controls.Add(Me.btnSubmit)
         Me.pLink.Controls.Add(Me.txtInfoLink)
         Me.pLink.Controls.Add(Me.lblLink)
@@ -152,7 +161,11 @@ Partial Class frmMainUpdated
         Me.txtInfoLink.Location = New System.Drawing.Point(93, 21)
         Me.txtInfoLink.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtInfoLink.Name = "txtInfoLink"
+<<<<<<< HEAD
         Me.txtInfoLink.Size = New System.Drawing.Size(448, 30)
+=======
+        Me.txtInfoLink.Size = New System.Drawing.Size(396, 30)
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         Me.txtInfoLink.TabIndex = 19
         Me.txtInfoLink.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
@@ -482,6 +495,7 @@ Partial Class frmMainUpdated
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(861, 352)
         Me.FlowLayoutPanel1.TabIndex = 3
         '
+<<<<<<< HEAD
         'btnOpenLink
         '
         Me.btnOpenLink.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -518,6 +532,44 @@ Partial Class frmMainUpdated
         Me.btnOpenLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnOpenLink.Textcolor = System.Drawing.Color.Black
         Me.btnOpenLink.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        'btnOpenInBroswer
+        '
+        Me.btnOpenInBroswer.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnOpenInBroswer.BackColor = System.Drawing.Color.Silver
+        Me.btnOpenInBroswer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnOpenInBroswer.BorderRadius = 7
+        Me.btnOpenInBroswer.ButtonText = "Open in Browser"
+        Me.btnOpenInBroswer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOpenInBroswer.DisabledColor = System.Drawing.Color.Gray
+        Me.btnOpenInBroswer.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOpenInBroswer.ForeColor = System.Drawing.Color.White
+        Me.btnOpenInBroswer.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnOpenInBroswer.Iconimage = Nothing
+        Me.btnOpenInBroswer.Iconimage_right = Nothing
+        Me.btnOpenInBroswer.Iconimage_right_Selected = Nothing
+        Me.btnOpenInBroswer.Iconimage_Selected = Nothing
+        Me.btnOpenInBroswer.IconMarginLeft = 0
+        Me.btnOpenInBroswer.IconMarginRight = 0
+        Me.btnOpenInBroswer.IconRightVisible = True
+        Me.btnOpenInBroswer.IconRightZoom = 0R
+        Me.btnOpenInBroswer.IconVisible = True
+        Me.btnOpenInBroswer.IconZoom = 90.0R
+        Me.btnOpenInBroswer.IsTab = False
+        Me.btnOpenInBroswer.Location = New System.Drawing.Point(498, 15)
+        Me.btnOpenInBroswer.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnOpenInBroswer.Name = "btnOpenInBroswer"
+        Me.btnOpenInBroswer.Normalcolor = System.Drawing.Color.Silver
+        Me.btnOpenInBroswer.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnOpenInBroswer.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnOpenInBroswer.selected = False
+        Me.btnOpenInBroswer.Size = New System.Drawing.Size(133, 45)
+        Me.btnOpenInBroswer.TabIndex = 22
+        Me.btnOpenInBroswer.Text = "Open in Browser"
+        Me.btnOpenInBroswer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnOpenInBroswer.Textcolor = System.Drawing.Color.Black
+        Me.btnOpenInBroswer.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         '
         'frmMainUpdated
         '
@@ -572,5 +624,9 @@ Partial Class frmMainUpdated
     Friend WithEvents Label1 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btnOpen As Bunifu.Framework.UI.BunifuFlatButton
+<<<<<<< HEAD
     Friend WithEvents btnOpenLink As Bunifu.Framework.UI.BunifuFlatButton
+=======
+    Friend WithEvents btnOpenInBroswer As Bunifu.Framework.UI.BunifuFlatButton
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
 End Class

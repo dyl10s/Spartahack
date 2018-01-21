@@ -91,6 +91,24 @@
     <Compile Include="connections.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="frmBusinessBcode.Designer.vb">
+      <DependentUpon>frmBusinessBcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusinessBcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusinessLogin.Designer.vb">
+      <DependentUpon>frmBusinessLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusinessLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusinessRegister.Designer.vb">
+      <DependentUpon>frmBusinessRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusinessRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmConnections.Designer.vb">
       <DependentUpon>frmConnections.vb</DependentUpon>
     </Compile>
@@ -160,6 +178,15 @@
   <ItemGroup>
     <EmbeddedResource Include="connections.resx">
       <DependentUpon>connections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusinessBcode.resx">
+      <DependentUpon>frmBusinessBcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusinessLogin.resx">
+      <DependentUpon>frmBusinessLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusinessRegister.resx">
+      <DependentUpon>frmBusinessRegister.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConnections.resx">
       <DependentUpon>frmConnections.vb</DependentUpon>
