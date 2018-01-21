@@ -39,25 +39,41 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        pbLoader.Visible = True
+        If (checkValid(txtEmail.Text) = True) Then
+            pbLoader.Visible = True
 
-        Dim sqlCon As New sqlManager
+            Dim sqlCon As New sqlManager
 
-        Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPass.Text + "'", 4)
+            Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPass.Text + "'", 4)
 
-        Dim fName As String = rawData.Split("~")(0)
-        Dim lName As String = rawData.Split("~")(1)
-        Dim email As String = rawData.Split("~")(2)
-        Dim bCode As String = rawData.Split("~")(3)
+            Dim fName As String = rawData.Split("~")(0)
+            Dim lName As String = rawData.Split("~")(1)
+            Dim email As String = rawData.Split("~")(2)
+            Dim bCode As String = rawData.Split("~")(3)
 
-        Dim clsUser As New clsUser(fName, lName, email, bCode)
-        Dim frmMain As New frmBusinessBcode
+            Dim clsUser As New clsUser(fName, lName, email, bCode)
+            Dim frmMain As New frmBusinessBcode
 
-        frmMain.user = clsUser
-        frmMain.Show()
-        Me.Hide()
+            frmMain.user = clsUser
+            frmMain.Show()
+            Me.Hide()
 
-        sqlCon.close()
+            sqlCon.close()
+        Else
+            MsgBox("Please enter a valid email!")
+        End If
 
     End Sub
+
+    Public Function checkValid(Str As String)
+        Dim strs As String() = {"!", "#", "$", "%", "^", "&", "*", "(", ")", "[", "]", "{", "}", "", "|", ";", "'", ":", """", "<", ">", ",", "?", "/", "`", "~", "=", "+"}
+
+        For Each s As String In strs
+            If Str.Contains(s) Then
+                Return False
+            End If
+        Next
+
+        Return True
+    End Function
 End Class
