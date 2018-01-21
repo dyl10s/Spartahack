@@ -30,4 +30,10 @@
         frm.Show()
         Me.Hide()
     End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        Dim frm As New frmBusinessBcode
+        frm.Show()
+        Me.Hide()
+    End Sub
 End Class
