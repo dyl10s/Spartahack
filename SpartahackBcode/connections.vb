@@ -43,4 +43,14 @@
         End If
 
     End Sub
+
+    Private Sub connections_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+
+        lblType.Text = "(" + Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(type) + ")"
+
+    End Sub
+
+    Public Sub setText()
+        lblType.Text = "(" + Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(type) + ")"
+    End Sub
 End Class

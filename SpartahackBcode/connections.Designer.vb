@@ -23,6 +23,7 @@ Partial Class connections
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.lblType = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -38,10 +39,24 @@ Partial Class connections
         Me.lblTitle.Text = "N/A"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lblType
+        '
+        Me.lblType.BackColor = System.Drawing.Color.Navy
+        Me.lblType.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lblType.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblType.ForeColor = System.Drawing.Color.White
+        Me.lblType.Location = New System.Drawing.Point(0, 92)
+        Me.lblType.Name = "lblType"
+        Me.lblType.Size = New System.Drawing.Size(150, 24)
+        Me.lblType.TabIndex = 1
+        Me.lblType.Text = "(Type)"
+        Me.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'connections
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.lblType)
         Me.Controls.Add(Me.lblTitle)
         Me.Name = "connections"
         Me.Size = New System.Drawing.Size(150, 116)
@@ -50,4 +65,5 @@ Partial Class connections
     End Sub
 
     Friend WithEvents lblTitle As Label
+    Friend WithEvents lblType As Label
 End Class
