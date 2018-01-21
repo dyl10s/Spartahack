@@ -97,6 +97,12 @@
     <Compile Include="frmBusinessBcode.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBusinessDisplay.Designer.vb">
+      <DependentUpon>frmBusinessDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusinessDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBusinessLogin.Designer.vb">
       <DependentUpon>frmBusinessLogin.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBusinessBcode.resx">
       <DependentUpon>frmBusinessBcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusinessDisplay.resx">
+      <DependentUpon>frmBusinessDisplay.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBusinessLogin.resx">
       <DependentUpon>frmBusinessLogin.vb</DependentUpon>
