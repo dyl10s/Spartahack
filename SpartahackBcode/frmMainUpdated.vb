@@ -1,4 +1,5 @@
-﻿Imports System.Net
+﻿Imports System.IO
+Imports System.Net
 
 Public Class frmMainUpdated
 
@@ -9,10 +10,13 @@ Public Class frmMainUpdated
     Private Sub frmMainUpdated_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.CenterToScreen()
 
+        Me.cons.Clear()
+        FlowLayoutPanel1.Controls.Clear()
+        connect = Nothing
 
         Dim sqlCon As New sqlManager
 
-        Dim cons As String() = sqlCon.getData("select * from connections where bCode = '" + user.bCode + "'", 4).Split(";")
+        Dim cons As String() = sqlCon.getData("select * from connections where bCode = '" + user.bCode + "'", 5).Split(";")
 
         Dim client As WebClient = New WebClient
         client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
@@ -29,6 +33,8 @@ Public Class frmMainUpdated
                 If item.type = "link" Then
                     item.lblTitle.Text = i.Split("~")(3)
                 End If
+                item.textData = i.Split("~")(1)
+                item.id = Integer.Parse(i.Split("~")(4))
 
                 'extractThumbnail.GetThumbnail(System.AppDomain.CurrentDomain.BaseDirectory() + i.Split("~")(1).Split("/")(i.Split("~")(1).Split("/").Length - 1))
                 FlowLayoutPanel1.Controls.Add(item)
@@ -43,8 +49,12 @@ Public Class frmMainUpdated
         Dim client As WebClient = New WebClient
         client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
 
+        Me.cons.Remove(connect)
+        FlowLayoutPanel1.Controls.Remove(connect)
+
         Dim sqlCon As New sqlManager
-        sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + txtInfoLink.Text + "', '" + user.bCode + "' , '" + connect.textData + "')")
+        sqlCon.sendData("Delete from connections where id = " + connect.id.ToString)
+        sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + txtInfoLink.Text + "', '" + user.bCode + "' , '" + connect.lblTitle.Text + "')")
 
         MsgBox("Upload Complete")
         pFile.Visible = False
@@ -52,6 +62,9 @@ Public Class frmMainUpdated
         Me.cons.Add(connect)
         FlowLayoutPanel1.Controls.Add(connect)
         sqlCon.close()
+
+        frmMainUpdated_Load(sender, e)
+
     End Sub
 
     Private Sub btnSignOut_Click(sender As Object, e As EventArgs) Handles btnSignOut.Click
@@ -81,11 +94,13 @@ Public Class frmMainUpdated
         connect.path = ""
 
         If type = "link" Then
+            txtInfoLink.Text = ""
             pLink.Show()
             pFile.Hide()
         End If
 
         If type = "file" Then
+            txtInfoLink.Text = ""
             pFile.Show()
             pLink.Hide()
         End If
@@ -95,11 +110,11 @@ Public Class frmMainUpdated
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblUploadFile.Click
 
         Dim ib As New InputBoxUpdated()
-        ib.setText("What would you like your link named (Ex. Linked In, Personal Website)")
+        ib.setText("What would you like your file named (Ex. Resume, Buisiness Card)")
         ib.ShowDialog()
 
         If ib.sentOutput = True Then
-            addNew(ib.output, "link")
+            addNew(ib.output, "file")
         End If
 
     End Sub
@@ -107,11 +122,11 @@ Public Class frmMainUpdated
     Private Sub lblConnectLink_Click(sender As Object, e As EventArgs) Handles lblConnectLink.Click
 
         Dim ib As New InputBoxUpdated()
-        ib.setText("What would you like your file named (Ex. Resume, Buisiness Card)")
+        ib.setText("What would you like your link named (Ex. Linked In, Personal Website)")
         ib.ShowDialog()
 
         If ib.sentOutput = True Then
-            addNew(ib.output, "file")
+            addNew(ib.output, "link")
         End If
 
     End Sub
@@ -168,7 +183,8 @@ Public Class frmMainUpdated
         client.UploadFile("ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + txtFileLink.Text.Split(".")(txtFileLink.Text.Split(".").Count - 1), txtFileLink.Text)
 
         Dim sqlCon As New sqlManager
-        sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + ftpLocation + "', '" + user.bCode + "' , '" + connect.textData + "')")
+        sqlCon.sendData("delete from connections where id =" + connect.id.ToString)
+        sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + ftpLocation + "', '" + user.bCode + "' , '" + connect.lblTitle.Text + "')")
 
         MsgBox("Upload Complete")
         pFile.Visible = False
@@ -177,12 +193,111 @@ Public Class frmMainUpdated
         FlowLayoutPanel1.Controls.Add(connect)
         sqlCon.close()
 
+        frmMainUpdated_Load(sender, e)
+
     End Sub
 
     Private Sub FlowLayoutPanel1_Click(sender As Object, e As EventArgs) Handles FlowLayoutPanel1.Click
 
         pLink.Hide()
         pFile.Hide()
+        connect = Nothing
+
+    End Sub
+
+    Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
+
+        If connect IsNot Nothing Then
+
+            Dim sqlCon As New sqlManager
+            Dim data As String = sqlCon.getData("select * from connections where id =" + connect.id.ToString, 5)
+
+            Dim type As String = data.Split("~")(0)
+            Dim url As String = data.Split("~")(1)
+
+            If type = "link" Then
+
+                Process.Start(url)
+
+            End If
+
+            If type = "file" Then
+
+                Dim client As WebClient = New WebClient
+                client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
+                Dim ftpLocation As String = "ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + txtFileLink.Text.Split(".")(txtFileLink.Text.Split(".").Count - 1)
+                client.DownloadFile("ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + url.Split(".")(url.Split(".").Count - 1), Directory.GetCurrentDirectory() + connect.lblTitle.Text + "." + url.Split(".")(url.Split(".").Count - 1))
+                Process.Start(Directory.GetCurrentDirectory() + connect.lblTitle.Text + "." + url.Split(".")(url.Split(".").Count - 1))
+
+            End If
+
+
+
+        End If
+
+    End Sub
+
+    Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs) Handles BunifuImageButton2.Click
+
+        If connect IsNot Nothing Then
+
+            Dim sqlCon As New sqlManager
+            sqlCon.sendData("delete from connections where id =" + connect.id.ToString)
+
+            Me.cons.Remove(connect)
+            FlowLayoutPanel1.Controls.Remove(connect)
+            connect = Nothing
+            pFile.Visible = False
+            pLink.Visible = False
+        End If
+
+    End Sub
+
+    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles btnDeleteLink.Click
+
+        If connect IsNot Nothing Then
+
+            Dim sqlCon As New sqlManager
+            sqlCon.sendData("delete from connections where id =" + connect.id.ToString)
+
+            Me.cons.Remove(connect)
+            FlowLayoutPanel1.Controls.Remove(connect)
+            connect = Nothing
+            pFile.Visible = False
+            pLink.Visible = False
+        End If
+
+    End Sub
+
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles btnOpenLink.Click
+
+        If connect IsNot Nothing Then
+
+            Dim sqlCon As New sqlManager
+            Dim data As String = sqlCon.getData("select * from connections where id =" + connect.id.ToString, 5)
+
+            Dim type As String = data.Split("~")(0)
+            Dim url As String = data.Split("~")(1)
+
+            If type = "link" Then
+
+                Process.Start(url)
+
+            End If
+
+            If type = "file" Then
+
+                Dim client As WebClient = New WebClient
+                client.Credentials = New NetworkCredential("1969568_admin", "soccer2121")
+                Dim ftpLocation As String = "ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + txtFileLink.Text.Split(".")(txtFileLink.Text.Split(".").Count - 1)
+                client.DownloadFile("ftp://spartaack.atwebpages.com/" + connect.lblTitle.Text + "." + url.Split(".")(url.Split(".").Count - 1), Directory.GetCurrentDirectory() + connect.lblTitle.Text + "." + url.Split(".")(url.Split(".").Count - 1))
+                Process.Start(Directory.GetCurrentDirectory() + connect.lblTitle.Text + "." + url.Split(".")(url.Split(".").Count - 1))
+
+            End If
+
+
+
+        End If
 
     End Sub
 

@@ -26,7 +26,7 @@ Partial Class frmMainUpdated
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMainUpdated))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.pLink = New Bunifu.Framework.UI.BunifuGradientPanel()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.btnDeleteLink = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnSubmit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtInfoLink = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.lblLink = New System.Windows.Forms.Label()
@@ -48,9 +48,13 @@ Partial Class frmMainUpdated
         Me.lblFile = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+<<<<<<< HEAD
+        Me.btnOpenLink = New Bunifu.Framework.UI.BunifuFlatButton()
+=======
         Me.btnOpenInBroswer = New Bunifu.Framework.UI.BunifuFlatButton()
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         Me.pLink.SuspendLayout()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnDeleteLink, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bunGradPan.SuspendLayout()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,8 +75,13 @@ Partial Class frmMainUpdated
         Me.pLink.BackColor = System.Drawing.Color.Silver
         Me.pLink.BackgroundImage = CType(resources.GetObject("pLink.BackgroundImage"), System.Drawing.Image)
         Me.pLink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
+        Me.pLink.Controls.Add(Me.btnOpenLink)
+        Me.pLink.Controls.Add(Me.btnDeleteLink)
+=======
         Me.pLink.Controls.Add(Me.btnOpenInBroswer)
         Me.pLink.Controls.Add(Me.BunifuImageButton1)
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         Me.pLink.Controls.Add(Me.btnSubmit)
         Me.pLink.Controls.Add(Me.txtInfoLink)
         Me.pLink.Controls.Add(Me.lblLink)
@@ -88,18 +97,18 @@ Partial Class frmMainUpdated
         Me.pLink.TabIndex = 1
         Me.pLink.Visible = False
         '
-        'BunifuImageButton1
+        'btnDeleteLink
         '
-        Me.BunifuImageButton1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuImageButton1.Image = Global.SpartahackBcode.My.Resources.Resources.Garbage
-        Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(802, 15)
-        Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(45, 45)
-        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton1.TabIndex = 1
-        Me.BunifuImageButton1.TabStop = False
-        Me.BunifuImageButton1.Zoom = 10
+        Me.btnDeleteLink.BackColor = System.Drawing.Color.Transparent
+        Me.btnDeleteLink.Image = Global.SpartahackBcode.My.Resources.Resources.Garbage
+        Me.btnDeleteLink.ImageActive = Nothing
+        Me.btnDeleteLink.Location = New System.Drawing.Point(802, 15)
+        Me.btnDeleteLink.Name = "btnDeleteLink"
+        Me.btnDeleteLink.Size = New System.Drawing.Size(45, 45)
+        Me.btnDeleteLink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnDeleteLink.TabIndex = 1
+        Me.btnDeleteLink.TabStop = False
+        Me.btnDeleteLink.Zoom = 10
         '
         'btnSubmit
         '
@@ -124,7 +133,7 @@ Partial Class frmMainUpdated
         Me.btnSubmit.IconVisible = True
         Me.btnSubmit.IconZoom = 90.0R
         Me.btnSubmit.IsTab = False
-        Me.btnSubmit.Location = New System.Drawing.Point(654, 15)
+        Me.btnSubmit.Location = New System.Drawing.Point(654, 12)
         Me.btnSubmit.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Normalcolor = System.Drawing.Color.Silver
@@ -152,7 +161,11 @@ Partial Class frmMainUpdated
         Me.txtInfoLink.Location = New System.Drawing.Point(93, 21)
         Me.txtInfoLink.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.txtInfoLink.Name = "txtInfoLink"
+<<<<<<< HEAD
+        Me.txtInfoLink.Size = New System.Drawing.Size(448, 30)
+=======
         Me.txtInfoLink.Size = New System.Drawing.Size(396, 30)
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         Me.txtInfoLink.TabIndex = 19
         Me.txtInfoLink.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
@@ -478,9 +491,48 @@ Partial Class frmMainUpdated
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 50)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(30)
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(861, 352)
         Me.FlowLayoutPanel1.TabIndex = 3
         '
+<<<<<<< HEAD
+        'btnOpenLink
+        '
+        Me.btnOpenLink.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnOpenLink.BackColor = System.Drawing.Color.Silver
+        Me.btnOpenLink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnOpenLink.BorderRadius = 7
+        Me.btnOpenLink.ButtonText = "Open"
+        Me.btnOpenLink.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOpenLink.DisabledColor = System.Drawing.Color.Gray
+        Me.btnOpenLink.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOpenLink.ForeColor = System.Drawing.Color.White
+        Me.btnOpenLink.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnOpenLink.Iconimage = Nothing
+        Me.btnOpenLink.Iconimage_right = Nothing
+        Me.btnOpenLink.Iconimage_right_Selected = Nothing
+        Me.btnOpenLink.Iconimage_Selected = Nothing
+        Me.btnOpenLink.IconMarginLeft = 0
+        Me.btnOpenLink.IconMarginRight = 0
+        Me.btnOpenLink.IconRightVisible = True
+        Me.btnOpenLink.IconRightZoom = 0R
+        Me.btnOpenLink.IconVisible = True
+        Me.btnOpenLink.IconZoom = 90.0R
+        Me.btnOpenLink.IsTab = False
+        Me.btnOpenLink.Location = New System.Drawing.Point(550, 15)
+        Me.btnOpenLink.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnOpenLink.Name = "btnOpenLink"
+        Me.btnOpenLink.Normalcolor = System.Drawing.Color.Silver
+        Me.btnOpenLink.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnOpenLink.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnOpenLink.selected = False
+        Me.btnOpenLink.Size = New System.Drawing.Size(81, 39)
+        Me.btnOpenLink.TabIndex = 22
+        Me.btnOpenLink.Text = "Open"
+        Me.btnOpenLink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnOpenLink.Textcolor = System.Drawing.Color.Black
+        Me.btnOpenLink.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
         'btnOpenInBroswer
         '
         Me.btnOpenInBroswer.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -517,6 +569,7 @@ Partial Class frmMainUpdated
         Me.btnOpenInBroswer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnOpenInBroswer.Textcolor = System.Drawing.Color.Black
         Me.btnOpenInBroswer.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
         '
         'frmMainUpdated
         '
@@ -532,7 +585,7 @@ Partial Class frmMainUpdated
         Me.Text = "frmMainUpdated"
         Me.pLink.ResumeLayout(False)
         Me.pLink.PerformLayout()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnDeleteLink, System.ComponentModel.ISupportInitialize).EndInit()
         Me.bunGradPan.ResumeLayout(False)
         Me.bunGradPan.PerformLayout()
         CType(Me.btnMin, System.ComponentModel.ISupportInitialize).EndInit()
@@ -554,7 +607,7 @@ Partial Class frmMainUpdated
     Friend WithEvents lblLink As Label
     Friend WithEvents txtInfoLink As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents btnSubmit As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents btnDeleteLink As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents pFile As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents BunifuImageButton2 As Bunifu.Framework.UI.BunifuImageButton
@@ -571,5 +624,9 @@ Partial Class frmMainUpdated
     Friend WithEvents Label1 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btnOpen As Bunifu.Framework.UI.BunifuFlatButton
+<<<<<<< HEAD
+    Friend WithEvents btnOpenLink As Bunifu.Framework.UI.BunifuFlatButton
+=======
     Friend WithEvents btnOpenInBroswer As Bunifu.Framework.UI.BunifuFlatButton
+>>>>>>> 3e3c190e57a6c9319b40214ba9642e20d9abcec1
 End Class
