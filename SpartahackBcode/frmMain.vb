@@ -47,7 +47,7 @@ Public Class frmMain
         Dim sqlCon As New sqlManager
         sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + ftpLocation + "', '" + user.bCode + "' , '" + connect.textData + "')")
 
-        MsgBox("Upload Complete")
+        Dim m As New MessageBox("Upload Complete")
         pFile.Visible = False
         pLink.Visible = False
         Me.cons.Add(connect)
@@ -115,7 +115,7 @@ Public Class frmMain
         Dim sqlCon As New sqlManager
         sqlCon.sendData("Insert Into connections (type, url, bCode, name) VALUES ('" + connect.type + "', '" + txtInfoLink.Text + "', '" + user.bCode + "' , '" + connect.textData + "')")
 
-        MsgBox("Upload Complete")
+        Dim m As New MessageBox("Upload Complete")
         pFile.Visible = False
         pLink.Visible = False
         Me.cons.Add(connect)

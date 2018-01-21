@@ -26,17 +26,19 @@ Partial Class frmDownloadDialog
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDownloadDialog))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.pnlTop = New System.Windows.Forms.Panel()
-        Me.pnlButtons = New System.Windows.Forms.Panel()
         Me.btnExit = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.lblFullName = New System.Windows.Forms.Label()
+        Me.pnlButtons = New System.Windows.Forms.Panel()
         Me.lblAddContact = New System.Windows.Forms.Label()
+        Me.lblFullName = New System.Windows.Forms.Label()
         Me.pnlDLButt = New System.Windows.Forms.Panel()
-        Me.btnSave = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btnSave = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.pnlTop.SuspendLayout()
-        Me.pnlButtons.SuspendLayout()
         CType(Me.btnExit, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlButtons.SuspendLayout()
         Me.pnlDLButt.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,17 +57,6 @@ Partial Class frmDownloadDialog
         Me.pnlTop.Size = New System.Drawing.Size(427, 48)
         Me.pnlTop.TabIndex = 1
         '
-        'pnlButtons
-        '
-        Me.pnlButtons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pnlButtons.Controls.Add(Me.lblAddContact)
-        Me.pnlButtons.Controls.Add(Me.lblFullName)
-        Me.pnlButtons.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlButtons.Location = New System.Drawing.Point(0, 48)
-        Me.pnlButtons.Name = "pnlButtons"
-        Me.pnlButtons.Size = New System.Drawing.Size(427, 68)
-        Me.pnlButtons.TabIndex = 2
-        '
         'btnExit
         '
         Me.btnExit.BackColor = System.Drawing.Color.Transparent
@@ -80,15 +71,16 @@ Partial Class frmDownloadDialog
         Me.btnExit.TabStop = False
         Me.btnExit.Zoom = 10
         '
-        'lblFullName
+        'pnlButtons
         '
-        Me.lblFullName.AutoSize = True
-        Me.lblFullName.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFullName.Location = New System.Drawing.Point(79, 13)
-        Me.lblFullName.Name = "lblFullName"
-        Me.lblFullName.Size = New System.Drawing.Size(253, 21)
-        Me.lblFullName.TabIndex = 0
-        Me.lblFullName.Text = "FIRSTNAME LASTNAME"
+        Me.pnlButtons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlButtons.Controls.Add(Me.lblAddContact)
+        Me.pnlButtons.Controls.Add(Me.lblFullName)
+        Me.pnlButtons.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlButtons.Location = New System.Drawing.Point(0, 48)
+        Me.pnlButtons.Name = "pnlButtons"
+        Me.pnlButtons.Size = New System.Drawing.Size(427, 68)
+        Me.pnlButtons.TabIndex = 2
         '
         'lblAddContact
         '
@@ -99,6 +91,16 @@ Partial Class frmDownloadDialog
         Me.lblAddContact.Size = New System.Drawing.Size(77, 13)
         Me.lblAddContact.TabIndex = 1
         Me.lblAddContact.Text = "Add Contact"
+        '
+        'lblFullName
+        '
+        Me.lblFullName.AutoSize = True
+        Me.lblFullName.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFullName.Location = New System.Drawing.Point(79, 13)
+        Me.lblFullName.Name = "lblFullName"
+        Me.lblFullName.Size = New System.Drawing.Size(253, 21)
+        Me.lblFullName.TabIndex = 0
+        Me.lblFullName.Text = "FIRSTNAME LASTNAME"
         '
         'pnlDLButt
         '
@@ -111,80 +113,6 @@ Partial Class frmDownloadDialog
         Me.pnlDLButt.Name = "pnlDLButt"
         Me.pnlDLButt.Size = New System.Drawing.Size(427, 76)
         Me.pnlDLButt.TabIndex = 3
-        '
-        'btnSave
-        '
-        Me.btnSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.btnSave.BackColor = System.Drawing.Color.White
-        Me.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnSave.BorderRadius = 7
-        Me.btnSave.ButtonText = "Save"
-        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSave.DisabledColor = System.Drawing.Color.Gray
-        Me.btnSave.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnSave.Iconimage = CType(resources.GetObject("btnSave.Iconimage"), System.Drawing.Image)
-        Me.btnSave.Iconimage_right = Nothing
-        Me.btnSave.Iconimage_right_Selected = Nothing
-        Me.btnSave.Iconimage_Selected = Nothing
-        Me.btnSave.IconMarginLeft = 0
-        Me.btnSave.IconMarginRight = 0
-        Me.btnSave.IconRightVisible = True
-        Me.btnSave.IconRightZoom = 0R
-        Me.btnSave.IconVisible = True
-        Me.btnSave.IconZoom = 50.0R
-        Me.btnSave.IsTab = False
-        Me.btnSave.Location = New System.Drawing.Point(15, 19)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Normalcolor = System.Drawing.Color.White
-        Me.btnSave.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnSave.OnHoverTextColor = System.Drawing.Color.White
-        Me.btnSave.selected = False
-        Me.btnSave.Size = New System.Drawing.Size(103, 43)
-        Me.btnSave.TabIndex = 39
-        Me.btnSave.Text = "Save"
-        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnSave.Textcolor = System.Drawing.Color.Black
-        Me.btnSave.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuFlatButton1
-        '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton1.BorderRadius = 7
-        Me.BunifuFlatButton1.ButtonText = "Download All"
-        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton1.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton1.Iconimage = CType(resources.GetObject("BunifuFlatButton1.Iconimage"), System.Drawing.Image)
-        Me.BunifuFlatButton1.Iconimage_right = Nothing
-        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton1.IconMarginLeft = 0
-        Me.BunifuFlatButton1.IconMarginRight = 0
-        Me.BunifuFlatButton1.IconRightVisible = True
-        Me.BunifuFlatButton1.IconRightZoom = 0R
-        Me.BunifuFlatButton1.IconVisible = True
-        Me.BunifuFlatButton1.IconZoom = 40.0R
-        Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(126, 19)
-        Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Silver
-        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.Size = New System.Drawing.Size(171, 43)
-        Me.BunifuFlatButton1.TabIndex = 40
-        Me.BunifuFlatButton1.Text = "Download All"
-        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.Black
-        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton2
         '
@@ -223,11 +151,97 @@ Partial Class frmDownloadDialog
         Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.Black
         Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'BunifuFlatButton1
+        '
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton1.BorderRadius = 7
+        Me.BunifuFlatButton1.ButtonText = "Download All"
+        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton1.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuFlatButton1.ForeColor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton1.Iconimage = CType(resources.GetObject("BunifuFlatButton1.Iconimage"), System.Drawing.Image)
+        Me.BunifuFlatButton1.Iconimage_right = Nothing
+        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton1.IconMarginLeft = 0
+        Me.BunifuFlatButton1.IconMarginRight = 0
+        Me.BunifuFlatButton1.IconRightVisible = True
+        Me.BunifuFlatButton1.IconRightZoom = 0R
+        Me.BunifuFlatButton1.IconVisible = True
+        Me.BunifuFlatButton1.IconZoom = 40.0R
+        Me.BunifuFlatButton1.IsTab = False
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(126, 19)
+        Me.BunifuFlatButton1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
+        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Silver
+        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.selected = False
+        Me.BunifuFlatButton1.Size = New System.Drawing.Size(171, 43)
+        Me.BunifuFlatButton1.TabIndex = 40
+        Me.BunifuFlatButton1.Text = "Download All"
+        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.Black
+        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'btnSave
+        '
+        Me.btnSave.Activecolor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnSave.BackColor = System.Drawing.Color.White
+        Me.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSave.BorderRadius = 7
+        Me.btnSave.ButtonText = "Save"
+        Me.btnSave.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSave.DisabledColor = System.Drawing.Color.Gray
+        Me.btnSave.Font = New System.Drawing.Font("Cooper Black", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnSave.Iconimage = CType(resources.GetObject("btnSave.Iconimage"), System.Drawing.Image)
+        Me.btnSave.Iconimage_right = Nothing
+        Me.btnSave.Iconimage_right_Selected = Nothing
+        Me.btnSave.Iconimage_Selected = Nothing
+        Me.btnSave.IconMarginLeft = 0
+        Me.btnSave.IconMarginRight = 0
+        Me.btnSave.IconRightVisible = True
+        Me.btnSave.IconRightZoom = 0R
+        Me.btnSave.IconVisible = True
+        Me.btnSave.IconZoom = 50.0R
+        Me.btnSave.IsTab = False
+        Me.btnSave.Location = New System.Drawing.Point(15, 19)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Normalcolor = System.Drawing.Color.White
+        Me.btnSave.OnHovercolor = System.Drawing.Color.Silver
+        Me.btnSave.OnHoverTextColor = System.Drawing.Color.White
+        Me.btnSave.selected = False
+        Me.btnSave.Size = New System.Drawing.Size(103, 43)
+        Me.btnSave.TabIndex = 39
+        Me.btnSave.Text = "Save"
+        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnSave.Textcolor = System.Drawing.Color.Black
+        Me.btnSave.TextFont = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.AutoScroll = True
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 116)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(55, 30, 30, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(427, 307)
+        Me.FlowLayoutPanel1.TabIndex = 4
+        '
         'frmDownloadDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(427, 499)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.pnlDLButt)
         Me.Controls.Add(Me.pnlButtons)
         Me.Controls.Add(Me.pnlTop)
@@ -235,9 +249,9 @@ Partial Class frmDownloadDialog
         Me.Name = "frmDownloadDialog"
         Me.Text = "frmDownloadDialog"
         Me.pnlTop.ResumeLayout(False)
+        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlButtons.ResumeLayout(False)
         Me.pnlButtons.PerformLayout()
-        CType(Me.btnExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlDLButt.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -253,4 +267,6 @@ Partial Class frmDownloadDialog
     Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnSave As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class

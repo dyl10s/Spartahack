@@ -6,7 +6,7 @@
         Try
             sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}')", txtEmail.Text, txtPassword.Text, txtfName.Text, txtlName.Text, txtbCode.Text))
         Catch ex As Exception
-            MsgBox("Registration Failed")
+            Dim m As New MessageBox("Registration Failed")
         End Try
 
         Dim login As New frmLogin
