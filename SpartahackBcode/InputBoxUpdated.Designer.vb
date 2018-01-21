@@ -73,7 +73,7 @@ Partial Class InputBoxUpdated
         Me.lblFile.Size = New System.Drawing.Size(441, 76)
         Me.lblFile.TabIndex = 28
         Me.lblFile.Text = "What would you like your link to be called? Ex: LinkedIn, Personal Website, etc."
-        Me.lblFile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblFile.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'txtFileLink
         '
