@@ -50,14 +50,6 @@ Public Class frmMainUpdated
             controlCount += 1
         Next
 
-        Select Case controlCount
-            Case <= 6
-                Me.Height = 200
-            Case <= 12
-                Me.Height = 320
-        End Select
-
-
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click

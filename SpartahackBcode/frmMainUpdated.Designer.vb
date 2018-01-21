@@ -85,7 +85,7 @@ Partial Class frmMainUpdated
         Me.pLink.GradientBottomRight = System.Drawing.Color.White
         Me.pLink.GradientTopLeft = System.Drawing.Color.White
         Me.pLink.GradientTopRight = System.Drawing.Color.White
-        Me.pLink.Location = New System.Drawing.Point(0, 343)
+        Me.pLink.Location = New System.Drawing.Point(0, 445)
         Me.pLink.Name = "pLink"
         Me.pLink.Quality = 10
         Me.pLink.Size = New System.Drawing.Size(985, 72)
@@ -397,7 +397,7 @@ Partial Class frmMainUpdated
         Me.pFile.GradientBottomRight = System.Drawing.Color.White
         Me.pFile.GradientTopLeft = System.Drawing.Color.White
         Me.pFile.GradientTopRight = System.Drawing.Color.White
-        Me.pFile.Location = New System.Drawing.Point(0, 271)
+        Me.pFile.Location = New System.Drawing.Point(0, 373)
         Me.pFile.Name = "pFile"
         Me.pFile.Quality = 10
         Me.pFile.Size = New System.Drawing.Size(985, 72)
@@ -564,14 +564,14 @@ Partial Class frmMainUpdated
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 50)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(20)
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(985, 221)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(985, 323)
         Me.FlowLayoutPanel1.TabIndex = 3
         '
         'frmMainUpdated
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 415)
+        Me.ClientSize = New System.Drawing.Size(985, 517)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.pFile)
         Me.Controls.Add(Me.pLink)
