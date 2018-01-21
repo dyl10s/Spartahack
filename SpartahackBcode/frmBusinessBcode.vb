@@ -60,6 +60,8 @@ Public Class frmBusinessBcode
 
 
         sqlCon.close()
+        frmDisplay.user = user
+        frmDisplay.bCode = txtCode.Text
         frmDisplay.Show()
         Me.Hide()
 

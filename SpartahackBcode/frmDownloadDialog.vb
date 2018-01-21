@@ -5,6 +5,8 @@ Public Class frmDownloadDialog
 
     Public connect As connections
     Public cons As New List(Of connections)
+    Public user As clsUser
+    Public bCode As String
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
@@ -115,9 +117,19 @@ Public Class frmDownloadDialog
 
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Dim frm As New frmBusinessBcode
-        frm.Show()
-        Me.Hide()
+    Private Sub lblAddContact_Click(sender As Object, e As EventArgs) Handles lblAddContact.Click
+
+        If user IsNot Nothing Then
+
+            Dim sqlCon As New sqlManager
+            sqlCon.sendData("Insert into addressbook (BusUser, ClientUser) Values ('" + user.bCode + "' , '" + bCode + "')")
+            Dim m As New MessageBox("The user was added to your address book.")
+
+        Else
+
+            Dim m As New MessageBox("The user was not added to your address book. To use this feature please create a business")
+
+        End If
+
     End Sub
 End Class
