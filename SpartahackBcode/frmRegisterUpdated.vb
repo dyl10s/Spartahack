@@ -1,4 +1,6 @@
-﻿Public Class frmRegisterUpdated
+﻿Imports System.Text.RegularExpressions
+
+Public Class frmRegisterUpdated
     Private Sub btnExit_Click(sender As Object, e As EventArgs)
         Application.Exit()
     End Sub
@@ -32,20 +34,24 @@
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        If (txtPass.Text = txtRetryPass.Text) Then
-            Dim sqlCon As New sqlManager
-
-            Try
-                sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBCODE.Text, 0))
-
-                Dim form As New frmLoginUpdated
-                form.Show()
-                Me.Hide()
-            Catch ex As Exception
-                MsgBox("Registration Failed")
-            End Try
-
-
+        If (txtBCODE.Text = Nothing Or txtEmail.Text = Nothing Or txtFirstName.Text = Nothing Or txtLastName.Text = Nothing Or txtPass.Text = Nothing Or txtRetryPass.Text = Nothing) Then
+            MsgBox("Please fill out all fields.")
+        Else
+            If (IsEmail(txtEmail.Text) = True) Then
+                If (txtPass.Text = txtRetryPass.Text) Then
+                    Dim sqlCon As New sqlManager
+                    Try
+                        sqlCon.sendData(String.Format("Call register('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtEmail.Text, txtPass.Text, txtFirstName.Text, txtLastName.Text, txtBCODE.Text, 0))
+                        Dim form As New frmLoginUpdated
+                        form.Show()
+                        Me.Hide()
+                    Catch ex As Exception
+                        MsgBox("Registration Failed")
+                    End Try
+                End If
+            Else
+                MsgBox("Please enter a valid email.")
+            End If
         End If
     End Sub
 
@@ -56,4 +62,10 @@
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
+
+    Function IsEmail(ByVal email As String) As Boolean
+        Static emailExpression As New Regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+
+        Return emailExpression.IsMatch(email)
+    End Function
 End Class

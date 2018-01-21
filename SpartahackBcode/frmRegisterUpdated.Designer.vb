@@ -66,7 +66,7 @@ Partial Class frmRegisterUpdated
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(235, 30)
         Me.txtEmail.TabIndex = 10
-        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblEmail
         '
@@ -105,7 +105,7 @@ Partial Class frmRegisterUpdated
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(235, 30)
         Me.txtPass.TabIndex = 12
-        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblRptPass
         '
@@ -133,7 +133,7 @@ Partial Class frmRegisterUpdated
         Me.txtRetryPass.Name = "txtRetryPass"
         Me.txtRetryPass.Size = New System.Drawing.Size(235, 30)
         Me.txtRetryPass.TabIndex = 14
-        Me.txtRetryPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtRetryPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblLastName
         '
@@ -161,7 +161,7 @@ Partial Class frmRegisterUpdated
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(235, 30)
         Me.txtLastName.TabIndex = 18
-        Me.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblFirstName
         '
@@ -189,7 +189,7 @@ Partial Class frmRegisterUpdated
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(235, 30)
         Me.txtFirstName.TabIndex = 16
-        Me.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtBCODE
         '

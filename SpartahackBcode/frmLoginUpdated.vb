@@ -1,4 +1,6 @@
-﻿Public Class frmLoginUpdated
+﻿Imports System.Text.RegularExpressions
+
+Public Class frmLoginUpdated
 
     Private Sub frmLoginUpdated_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
@@ -14,25 +16,37 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        pbLoader.Visible = True
 
-        Dim sqlCon As New sqlManager
+        If (IsEmail(txtEmail.Text) = True) Then
+            pbLoader.Visible = True
 
-        Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPassword.Text + "'", 4)
+            Dim sqlCon As New sqlManager
 
-        Dim fName As String = rawData.Split("~")(0)
-        Dim lName As String = rawData.Split("~")(1)
-        Dim email As String = rawData.Split("~")(2)
-        Dim bCode As String = rawData.Split("~")(3)
+            Try
+                Dim rawData As String = sqlCon.getData("Select FirstName, LastName, Email, bCode from users where email = '" + txtEmail.Text + "' and password = '" + txtPassword.Text + "'", 4)
 
-        Dim clsUser As New clsUser(fName, lName, email, bCode)
-        Dim frmMain As New frmMainUpdated
+                Dim fName As String = rawData.Split("~")(0)
+                Dim lName As String = rawData.Split("~")(1)
+                Dim email As String = rawData.Split("~")(2)
+                Dim bCode As String = rawData.Split("~")(3)
 
-        frmMain.user = clsUser
-        frmMain.Show()
-        Me.Hide()
+                Dim clsUser As New clsUser(fName, lName, email, bCode)
+                Dim frmMain As New frmMainUpdated
+                frmMain.user = clsUser
+                frmMain.Show()
+                Me.Hide()
 
-        sqlCon.close()
+            Catch ex As Exception
+                MsgBox("Email or password is incorrect.")
+                pbLoader.Visible = False
+            End Try
+
+
+
+            sqlCon.close()
+        Else
+            MsgBox("Please enter a valid email.")
+        End If
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -59,4 +73,10 @@
         frm.Show()
         Me.Hide()
     End Sub
+
+    Function IsEmail(ByVal email As String) As Boolean
+        Static emailExpression As New Regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+
+        Return emailExpression.IsMatch(email)
+    End Function
 End Class

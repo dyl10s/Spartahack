@@ -63,7 +63,7 @@ Partial Class frmLoginUpdated
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(293, 54)
         Me.txtEmail.TabIndex = 1
-        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPassword
         '
@@ -80,7 +80,7 @@ Partial Class frmLoginUpdated
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(293, 54)
         Me.txtPassword.TabIndex = 2
-        Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnLogin
         '
@@ -175,7 +175,7 @@ Partial Class frmLoginUpdated
         Me.lblBusiness.Location = New System.Drawing.Point(137, 486)
         Me.lblBusiness.Name = "lblBusiness"
         Me.lblBusiness.Size = New System.Drawing.Size(111, 15)
-        Me.lblBusiness.TabIndex = 23
+        Me.lblBusiness.TabIndex = 5
         Me.lblBusiness.Text = "Business Client"
         '
         'pbLoader

@@ -58,7 +58,7 @@ Partial Class frmBusinessLogin
         Me.lblBusiness.Location = New System.Drawing.Point(130, 478)
         Me.lblBusiness.Name = "lblBusiness"
         Me.lblBusiness.Size = New System.Drawing.Size(121, 15)
-        Me.lblBusiness.TabIndex = 33
+        Me.lblBusiness.TabIndex = 6
         Me.lblBusiness.Text = "Consumer Client"
         '
         'Button1
@@ -101,7 +101,7 @@ Partial Class frmBusinessLogin
         Me.btnRegister.OnHoverTextColor = System.Drawing.Color.White
         Me.btnRegister.selected = False
         Me.btnRegister.Size = New System.Drawing.Size(115, 48)
-        Me.btnRegister.TabIndex = 27
+        Me.btnRegister.TabIndex = 4
         Me.btnRegister.Text = "Register"
         Me.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnRegister.Textcolor = System.Drawing.Color.White
@@ -138,7 +138,7 @@ Partial Class frmBusinessLogin
         Me.btnLogin.OnHoverTextColor = System.Drawing.Color.White
         Me.btnLogin.selected = False
         Me.btnLogin.Size = New System.Drawing.Size(118, 48)
-        Me.btnLogin.TabIndex = 26
+        Me.btnLogin.TabIndex = 3
         Me.btnLogin.Text = "Login"
         Me.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnLogin.Textcolor = System.Drawing.Color.White
@@ -159,8 +159,8 @@ Partial Class frmBusinessLogin
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(293, 54)
-        Me.txtEmail.TabIndex = 24
-        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtEmail.TabIndex = 1
+        Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblBus
         '
@@ -189,8 +189,8 @@ Partial Class frmBusinessLogin
         Me.txtPass.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(293, 54)
-        Me.txtPass.TabIndex = 35
-        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtPass.TabIndex = 2
+        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BunifuFlatButton1
         '
@@ -223,7 +223,7 @@ Partial Class frmBusinessLogin
         Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton1.selected = False
         Me.BunifuFlatButton1.Size = New System.Drawing.Size(241, 48)
-        Me.BunifuFlatButton1.TabIndex = 36
+        Me.BunifuFlatButton1.TabIndex = 5
         Me.BunifuFlatButton1.Text = "Continue as guest"
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
